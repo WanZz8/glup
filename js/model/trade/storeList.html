@@ -1,0 +1,88 @@
+<table class="info">
+    <tr>
+        <th><%=$ln('交易ID')%></th>
+        <th><%=$ln('开仓时间')%></th>
+        <th><%=$ln('交易商品')%></th>
+        <th><%=$ln('买卖')%></th>
+        <th><%=$ln('保证金')%></th>
+        <th><%=$ln('止损价格')%></th>
+        <th><%=$ln('止盈价格')%></th>
+        <th><%=$ln('模式')%></th>
+        <th><%=$ln('开仓价')%></th>
+        <th><%=$ln('当前盈亏')%></th>
+        <th><%=$ln('操作')%></th>
+        <th><%=$ln('状态')%></th>
+    </tr>
+    <% if(list.length > 0){%>
+        <% for(var i = 0,len = list.length;i < len;i++){%>
+        <% var obj = list[i];%>
+        <tr>
+            <td>
+                <%=obj.id%>
+            </td>
+            <td>
+                <% var r = $tool().formatDate(obj.tradeTime.time,'y/m/d h:i:s').split(' ')%>
+                <span><%= r[0]%></span>
+                <p><%= r[1]%></p>
+            </td>
+            <td>
+                <%=obj.commodity%>
+                <p>(<%=obj.contCode%>)</p>
+            </td>
+            <td>
+                <span class="<%= obj.isBuy===true?'rise':'fall'%>"><%= obj.isBuy===true?'买涨':'买跌'%><%=obj.volume%>手</span>
+            </td>
+            <td>
+                <%= $Math().abs(obj.stopLossBegin)%>
+            </td>
+            <td>
+                <%= $Math().abs(obj.stopLoss)%>
+            </td>
+            <td>
+                <%= $Math().abs(obj.stopProfit)%>
+            </td>
+            <td>
+                <%= obj.moneyType === 0?'元':'角'%>
+            </td>
+            <td>
+                <%= obj.opPrice.toFixed(obj.priceDigit)%>
+            </td>
+            <td>
+                <span class="<%= obj.income >= 0?'rise':'fall'%>"><%= obj.state === null?'正在获取':obj.income%></span>
+            </td>
+            <td>
+                <div class="UI-Button setDetail" data-events="click:setProfit;" data-bind="<%=obj.id%>">
+                    <div><%=$ln('设置止盈止损')%></div>
+                </div>
+            </td>
+            <td>
+                <%if(obj.tradeStatus <= 5){%>
+                <div class="UI-Button disabled">
+                    <div><%=$ln('正在开仓')%></div>
+                </div>
+                <%}else if(obj.tradeStatus === 9){%>
+                <div class="UI-Button disabled">
+                    <div><%=$ln('等待卖出')%></div>
+                </div>
+                <%}else if(obj.tradeStatus === 10){%>
+                <div class="UI-Button disabled">
+                    <div><%=$ln('正在卖出')%></div>
+                </div>
+                <%}else if(obj.tradeStatus === 12){%>
+                <div class="UI-Button disabled">
+                    <div><%=$ln('卖出成功')%></div>
+                </div>
+                <%}else if(obj.tradeStatus === 8 ||obj.tradeStatus === 11){%>
+                <div class="UI-Button sold" data-events="click:sold;" data-bind="<%=obj.id%>">
+                    <div><%=$ln('卖出')%></div>
+                </div>
+                <%}%>
+            </td>
+        </tr>
+        <% } %>
+    <% }else{ %>
+    <tr>
+        <td colspan="12"><%=$ln('暂无订单')%></td>
+    </tr>
+    <% }%>
+</table>

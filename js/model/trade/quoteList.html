@@ -1,0 +1,33 @@
+<% for(var i = 0,len = list.length;i < len;i++){%>
+<% var [,t] = list[i];%>
+<% var brief = $q().getBrief(t.contract)%>
+    <li class="<%if((search.t === undefined && search.c === undefined && i === 0 && type === 'foreign')|| search.c === t.contract){%>active<%}%>"
+        data-events="click:switchQuote;" data-bind="<%=t.code%>">
+        <a key="t=<%=type%>&c=<%=t.contract%>" class="<%if(brief === null ||brief.isTrading === false){%>rest<%}else if(brief.isUp){%>rise<%}else{%>fall<%}%>">
+        <div class="name">
+            <div class="inner">
+                <%=t.name%>
+                <%if($q().isHot(t.code)){%>
+                <div class="table">
+                    <div class="tableCell">
+                        <div class="icon icon-hot"></div>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+        </div>
+        <%if(brief !== null){%>
+        <%if(brief.isTrading){%>
+        <div class="price"><%=brief.price.toFixed(brief.priceDigit)%></div>
+        <div class="rate"><%=brief.percent%>%</div>
+        <%}else{%>
+        <div class="price"><%=brief.price.toFixed(brief.priceDigit)%></div>
+        <div class="rate"><%=$ln('休市')%></div>
+        <%}%>
+        <%}else{%>
+        <div class="price">-</div>
+        <div class="rate"><%=$ln('休市')%></div>
+        <%}%>
+        </a>
+    </li>
+<%}%>

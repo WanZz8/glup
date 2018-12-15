@@ -1,0 +1,172 @@
+<div class="trade">
+	<div class="firm-top">
+		<div class="firm-top-center">
+			<div class="center-dynamic">| 交易动态</div>
+			<div class="center-down">
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>开盘 <span class="red-words">47.81</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span class="black-words">47.81</span></p>
+					</div>
+				</div>
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>涨跌 <span class="blue-words">-0.01</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span class="blue-words">-0.02%</span></p>
+					</div>
+				</div>
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>最高 <span class="red-words">47.81</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span class="blue-words">47.81</span></p>
+					</div>
+				</div>
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>涨停 <span class="black-words">47.81</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span class="black-words">47.81</span></p>
+					</div>
+				</div>
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>今结 <span class="red-words">47.81</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span class="black-words">47.81</span></p>
+					</div>
+				</div>
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>持仓 <span class="black-words">47.81</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span class="black-words">47.81</span></p>
+					</div>
+				</div>
+				<div class="center-up-under">
+					<div class="center-under-left">
+						<p>总手 <span class="black-words">47 999 万</span></p>
+					</div>
+					<div class="center-under-right">
+						<p>开盘 <span>— —</span></p>
+					</div>
+				</div>
+				<div class="center-market-furlough red-words">已休市，下次交易时间明天 06:66</div>
+			</div>
+		</div>
+		<div class="firm-top-left">
+			<div class="top-tab">
+				<ul class="tab-ul">
+					<li class="tab-ul-first">| 行情</li>
+					<li class="tab-ul-action">美原油</li>
+					<li>美黄金</li>
+					<li>美白银</li>
+					<li>恒指</li>
+					<li>小恒指</li>
+					<li>富时A50</li>
+				</ul>
+			</div>
+			<div class="top-left-content">
+				<div class="content-btns">
+					<div class="content-btns-div">
+						<button class="content-btns-day content-btns-times">分时</button><button class="content-btns-day">日线<span class="caret"></span></button><button  class="content-btns-day">分时</button><button  class="content-btns-day content-btns-minute">分时</button>
+						<button class="content-direct-broadcast">持仓直播</button>
+					</div>
+					<div class="content-btns-num">46.58 +0.70 +1.53%</div>
+				</div>
+				<div class="content-main">
+					<img src="./images/temp/dealpage1..png">
+				</div>
+				<div class="content-sales-volume">
+					<span class="content-redline-num"><img src="./images/redline.png" alt="" class="redline">26/46.57</span>
+					买卖量
+					<span class="content-greenline-num">26/46.57<img src="./images/block.png" alt="" class="greenline"></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="firm-top-right">
+			<div class="right-hero-college">
+				| 买卖委托
+				<div class="mode">
+					<button class="active">元</button>
+					<button>角</button>
+				</div>
+			</div>
+			<div class="right-selling">
+				<p>美原油 - CL1706合约：<span class="black-words">持仓至 04:55 自动平仓</span></p>
+				<p>交易数量：</p>
+				<div class="content hand">
+					<button type="button" class="active">1手</button>
+					<button type="button">2手</button>
+					<button type="button">3手</button>
+					<button type="button">4手</button>
+					<button type="button">5手</button>
+				</div>
+				<p>触发止盈：<span class="black-words">115200元</span></p>
+				<p>触发止损：</p>
+				<div class="content loss">
+					<button type="button" class="active">1手</button>
+					<button type="button">2手</button>
+					<button type="button">3手</button>
+					<button type="button">4手</button>
+					<button type="button">5手</button>
+				</div>
+				<div class="dotted-line">
+					<div class="dotted-line-top">
+						支付>交易综合费：<span class="red-words">168元</span>
+					</div>
+					<div class="dotted-line-bottom">
+						冻结>履约保证金：<span class="red-words">23040元</span>
+						<span>($3200)</span>
+						<div class="remark">美原油按美元交易，平台以人民币结算 $1 = ¥7.2</div>
+					</div>
+				</div>
+				<div class="btn-main">
+					<button type="button" class="leftbtn">买涨(47.28)</button>
+					<button type="button" class="rightbtn">买涨(47.28)</button>
+				</div>
+			</div>
+		</div>
+		<div class="clean"></div>
+		<div class="hold">
+			<p>| 持仓明细</p>
+			<div class="main">
+				<table>
+					<tr>
+						<th>ID</th>
+						<th>商品</th>
+						<th>合约</th>
+						<th>买卖</th>
+						<th>盈亏</th>
+						<th>止盈</th>
+						<th>止损</th>
+						<th>买入</th>
+						<th>卖出</th>
+						<th>状态</th>
+					</tr>
+					<tr>
+						<td>24556</td>
+						<td>小恒指</td>
+						<td>（MHI1709）</td>
+						<td class="brown-words">买涨1手</td>
+						<td><span class="loss-words">-17.6</span>(HK＄-20)</td>
+						<td>1320元</td>
+						<td>-264元</td>
+						<td>27958</td>
+						<td>720</td>
+						<td class="gold-words">结算成功</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

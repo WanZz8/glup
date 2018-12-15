@@ -1,0 +1,71 @@
+<div class="customer-body">
+	<div class="customer-main">
+		<span class="hero-customer white-words">致远金融客服</span>
+		<span class="customer-period white-words">客户为尊，立新致远</span>
+		<div class="close" data-events="click:close;"><span class="icon icon-close"></span></div>
+	</div>
+	<div class="customer-chat">
+		<div class="chat-left">
+			<div class="chat-bg">
+				<ul class="live-chat-main">
+					<% if(!isLogin){ %>
+					<li class="chat-txt-left" >
+						<div class="head-menu-left top-img">
+							<img src="./images/head.png" alt="">
+						</div>
+						<div class="online-customer-service">
+							<div class="gray-words">在线客服  <span>2017-08-17 18:44:49</span></div>
+							<div class="be-coming">
+								<span class="top-level"></span>
+								<p>请先 <a pop="login">登录</a> 平台账号，即可进行留言或在线咨询服务</p>
+							</div>
+						</div>
+					</li>
+					<% } %>
+					<!--<li class="chat-txt-left" >
+						<div class="head-menu-left top-img">
+							<img src="./images/head.png" alt="">
+						</div>
+						<div class="online-customer-service">
+							<div class="gray-words">在线客服  <span>2017-08-17 18:44:49</span></div>
+							<div class="be-coming">
+								<span class="top-level"></span>
+								<p>你好！</p>
+							</div>
+						</div>
+					</li>
+					<li class="chat-txt-right" v-else>
+						<div class="head-menu-right top-img">
+							<img src="./images/averter.png" alt="">
+						</div>
+						<div class="online-service-right">
+							<div class="gray-words right-text">我  <span>2017-08-17 18:44:49</span></span></div>
+							<div class="few-questions">
+								<span class="right-level"></span>
+								<p>你好！</p>
+							</div>
+						</div>
+					</li>-->
+				</ul>
+			</div>
+			<div class="chat-box">
+				<textarea class="chat-box-text"  placeholder="请输入您想资讯的内容"></textarea>
+			</div>
+			<div class="chat-ifrom">
+				<button type="button" class="chat-close" data-events="click:close;">关闭</button>
+				<button type="submit" class="chat-send" data-events="click:send;">发送</button>
+			</div>
+		</div>
+		<div class="chat-right">
+			<div class="chat-pic">
+				<img src="./images/chats.jpg" alt="">
+			</div>
+			<div class="chat-company">
+				| 公司简介
+			</div>
+			<div class="chat-brief">
+				<p>致远金融对所有交易秉承公平原则<br>公司提供最权威报价，最先进交易系统<br>最专业资讯分析打造业界最佳期货交易平台</p>
+			</div>
+		</div>
+	</div>
+</div>

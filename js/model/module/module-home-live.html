@@ -1,0 +1,28 @@
+<% for(var i = 0,len = list.length;i < len;i++){ %>
+<%var item = list[i]%>
+<div class="left">
+    <% if(i === 0){ %>
+    <div class="under-left">
+        <div class="under-left-small">
+        	<p><%=item.day%></p>
+        	<span><%=item.month%><%=$ln('月')%></span>
+        </div>
+    </div>
+    <div class="left" style="padding-top: 12px;">
+        <div class="under-times-light" style="padding-left: 50px;">
+        	<span class="icon icon-clock"></span>
+            <%= item.time%>
+        </div>
+    </div>
+    <div class="under-dark" style="padding-top: 3px;"><%=#item.txt%></div>
+    <% }else{ %>
+    <div class="under-times"></div>
+    <div class="left">
+        <div class="under-times-light">
+            <span class="icon icon-clock"></span><%= item.time%>
+        </div>
+    </div>
+    <div class="under-dark"><%=#item.txt%></div>
+    <% } %>
+</div>
+<% } %>

@@ -1,0 +1,25 @@
+	<div class="page-recharge-common">
+		<ul>
+			<li>
+				<div class="label">充值银行：</div>
+				<div class="inpt">
+					<select disabled="disabled">
+						<option value="招商银行">招商银行</option>
+					</select>
+				</div>
+			</li>
+			<li>
+				<div class="label">充值金额：</div>
+				<div class="inpt">
+					<input type="text" maxlength="7" data-events="keyup:money;" v-input="money" placeholder="请输入金额">
+				</div>
+			</li>
+		</ul>
+		<div class="opt"><button class="next" data-events="click:next;">下一步</button></div>
+		<div class="page-recharge-remark">
+			<h5>温馨提示：</h5>
+			<p>2）点击下一步后，将跳转到第三方支付界面</p>
+			<p>4）如需帮助请联系人工客服QQ：800037618</p>
+			<!--<p>4）如需帮助，请 <a href='javascript:document.getElementById("#chat").style.display=block;' pop="live-chat">联系客服</a></p>-->
+		</div>
+	</div>

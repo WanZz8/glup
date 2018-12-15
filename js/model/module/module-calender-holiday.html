@@ -1,0 +1,28 @@
+<% if(list.length>0){%>
+<thead>
+	<tr>
+		<th>时间</th>
+		<th>国家/地区</th>
+		<th>市场</th>
+		<th>节日名称</th>
+		<th>详细安排</th>
+	</tr>
+</thead>
+<% } %>
+<tbody>
+	<% if(list.length==0){%>
+	<tr>
+		<td colspan="5">暂无数据</td>
+	</tr>
+	<% } %>
+	<% for(var i=0,len=list.length;i<len;i++){%>
+	<% var item = list[i];%>
+	<tr>
+		<td><%= $tool().transferDateToString(item.date,1)%></td>
+		<td><%=item.country%></td>
+		<td><%=item.exchangename%></td>
+		<td><%=item.holidayname%></td>
+		<td><%=item.note%></td>
+	</tr>
+	<% } %>
+</tbody>

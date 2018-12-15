@@ -1,0 +1,55 @@
+<div class="page-login" data-element="mainNode">
+    <div class="mask"></div>
+    <div class="content">
+        <div class="body">
+            <div class="main">
+                <div class="head">
+                    登录
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-close" data-events="click:close;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="bar">
+                        <div class="table left">
+                            <div class="tableCell">
+                                <div class="icon icon-user-1"></div>
+                            </div>
+                        </div>
+                        <input type="tel" maxlength="11" class="UI-Input" placeholder="请输入手机号码" v-input="phone">
+                    </div>
+                    <div class="bar">
+                        <div class="table left">
+                            <div class="tableCell">
+                                <div class="icon icon-lock"></div>
+                            </div>
+                        </div>
+                        <input type="password" maxlength="16" class="UI-Input" placeholder="请输入密码" v-input="password" data-element="passHide">
+                        <input type="text" maxlength="16" class="UI-Input" placeholder="请输入密码" v-input="password" data-element="passShow" style="display: none;">
+                        <div class="table right" data-events="click:switchPass;">
+                            <div class="tableCell">
+                                <div class="icon" ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <input type="checkbox" id="rememberPop"><label for="rememberPop"></label><span>记住密码</span>
+                    </div>
+                    <div class="bar">
+                        <div class="UI-Button" data-events="click:login;">
+                            <div>登录</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="bar">
+                        <a href="#forget">忘记密码?</a>
+                        <a href="#register">注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

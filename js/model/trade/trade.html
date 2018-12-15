@@ -1,0 +1,223 @@
+<div class="trade" data-element="modelNode">
+    <div class="wrap">
+        <div class="broadcast" data-element="streamNode"></div>
+    </div>
+    <div class="wrap">
+        <table>
+            <tr>
+                <td>
+                    <div class="quoteList">
+                        <div class="category <%if(!search.t|| search.t === 'foreign'){%>active<%}%>"
+                             data-events="click:switchMarket;"><%=$ln('国际期货')%>
+                        </div>
+                        <ul class="list foreign">
+                        </ul>
+                        <div class="category <%if(search.t === 'stock'){%>active<%}%>"
+                             data-events="click:switchMarket;"><%=$ln('股指期货')%>
+                        </div>
+                        <ul class="list stock">
+                        </ul>
+                        <div class="category <%if(search.t === 'domestic'){%>active<%}%>"
+                             data-events="click:switchMarket;"><%=$ln('国内期货')%>
+                        </div>
+                        <ul class="list domestic">
+                        </ul>
+                        <div class="category <%if(search.t === 'digital'){%>active<%}%>"
+                             data-events="click:switchMarket;"><%=$ln('数字货币')%>
+                        </div>
+                        <ul class="list digital">
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="bg">
+                        <div class="title chart"><%=$ln('行情走势图')%>-<i v-param="sn">美原油</i>(<i v-param="code">CL1301</i>)<span data-events="click:tradeRule;"><%=$ln('交易规则')%></span>
+                        </div>
+                        <div class="quotes">
+                            <div class="title"><%=$ln('实时数据')%>
+                                <ul class="live">
+                                    <li v-param="quote">46.58</li>
+                                    <li v-param="rate">+0.70</li>
+                                    <li v-param="percent">+1.53%</li>
+                                </ul>
+                            </div>
+                            <!--<ul class="UI-Tab timeLine">-->
+                                <!--<li class="btn active" data-events="click:switchType" data-bind="sline">-->
+                                    <!--<%=$ln('分时')%>-->
+                                <!--</li>-->
+                                <!--<li class="btn" data-events="click:switchType" data-bind="kline">-->
+                                    <!--<%=$ln('日线')%>-->
+                                <!--</li>-->
+                                <!--<li class="btn">-->
+                                    <!--<b style="font-weight: normal;" v-param="mk"><%=$ln('分线')%></b>-->
+                                    <!--<ul class="sub">-->
+                                        <!--<li class="sub-btn" data-events="click:switchSubType" data-bind="mkline1,1分">-->
+                                            <!--1<%=$ln('分')%>-->
+                                        <!--</li>-->
+                                        <!--<li class="sub-btn" data-events="click:switchSubType" data-bind="mkline3,3分">-->
+                                            <!--3<%=$ln('分')%>-->
+                                        <!--</li>-->
+                                        <!--<li class="sub-btn" data-events="click:switchSubType" data-bind="mkline5,5分">-->
+                                            <!--5<%=$ln('分')%>-->
+                                        <!--</li>-->
+                                        <!--<li class="sub-btn" data-events="click:switchSubType" data-bind="mkline15,15分">-->
+                                            <!--15<%=$ln('分')%>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li class="btn" data-events="click:switchType" data-bind="tick">-->
+                                    <!--<%=$ln('闪电')%>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+
+                            <div class="trend" id="trend"></div>
+                            <!--<div class="volume">-->
+                                <!--<div class="left">-->
+                                    <!--<div class="riseVolume" data-element="riseVolume"></div>-->
+                                    <!--<div class="rise"><span v-param="buyVolume">26</span>/<span-->
+                                            <!--v-param="buy">46.75</span></div>-->
+                                <!--</div>-->
+                                <!--<div class="mid"><%=$ln('买卖量')%></div>-->
+                                <!--<div class="right">-->
+                                    <!--<div class="fall"><span v-param="sell">46.75</span>/<span-->
+                                            <!--v-param="sellVolume">26</span></div>-->
+                                    <!--<div class="fallVolume" data-element="fallVolume"></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="deal">
+                            <div class="title"><%=$ln('买卖委托')%>
+                                <div class="sim-balance" data-element="simNode">
+                                    <div class="amount"><%=$ln('模拟币')%> <span v-param="simBalance"></span></div>
+                                    <div class="UI-Button" data-element="addSimNode" style="display: none;">
+                                    <div class="tips">当模拟币少于等于1,000，且当前无持仓时，可增加到10,000</div>
+                                    <div data-events="click:addSimBalance;"><%=$ln('一键加币')%></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contract">
+
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="dynamic">
+                        <div class="title dyn"><%=$ln('交易动态')%></div>
+                        <div class="detail-container">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="storage">
+            <div class="setProfit" data-element="mainNode">
+                <div class="mask"></div>
+                <div class="content">
+                    <div class="body">
+                        <div class="main">
+                            <div class="head">
+                                <%=$ln('设置止盈止损')%>
+                                <div class="table">
+                                    <div class="tableCell">
+                                        <div class="icon icon-close" data-events="click:closeProfit;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="area">
+                                <div class="bar">
+                                    <div class="left">
+                                        <%=$ln('止盈金额')%>
+                                    </div>
+                                    <div class="mid">
+                                        <div class="operateCircle" data-events="click:subProfit;">&#8722;</div>
+                                        <input type="range" class="range" step="1" min="1" max="10"
+                                               data-element="profitNode" data-events="input:scrollProfit;">
+                                        <div class="operateCircle" data-events="click:addProfit;">&#43;</div>
+                                    </div>
+                                    <div class="right" v-param="stopProfit">
+                                        8750元
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <div class="left">
+                                        <%=$ln('止损金额')%>
+                                    </div>
+                                    <div class="mid">
+                                        <div class="operateCircle" data-events="click:subLoss;">&#8722;</div>
+                                        <input type="range" class="range lose" step="1" min="1" max="10"
+                                               data-element="lossNode" data-events="input:scrollLoss;">
+                                        <div class="operateCircle" data-events="click:addLoss;">&#43;</div>
+                                    </div>
+                                    <div class="right" v-param="stopLoss">
+                                        8750元
+                                    </div>
+                                </div>
+                                <div class="bar controller">
+                                    <div class="UI-Button cancel" data-events="click:closeProfit;">
+                                        <div>取 消</div>
+                                    </div>
+                                    <div class="UI-Button" data-events="click:applyProfit;">
+                                        <div>确 定</div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <p>温馨提示：</p>
+                                    <p>* 止盈金额：当盈利达到（多于等于）该金额之后，系统自动触发平仓</p>
+                                    <p>* 止损金额：当亏损达到（多于等于）该金额之后，系统自动触发平仓</p>
+                                    <p>* 如需帮助，请 <a pop="live-chat">联系客服</a></p>
+                                </div>
+                            </div>
+                            <div class="foot">
+                                <div class="bar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <ul data-element="storeType">
+                    <li class="active" data-events="click:switchStore;" data-bind="1">
+                        <span><%=$ln('持仓明细')%></span>
+                        <!--<i>(<span>10</span>)</i>-->
+                    </li>
+                    <li data-events="click:switchStore;" data-bind="2">
+                        <span><%=$ln('结算列表')%></span>
+                        <!--<i>(<span>10</span>)</i>-->
+                    </li>
+                    <li data-events="click:switchStore;" data-bind="3">
+                        <span><%=$ln('流单列表')%></span>
+                        <!--<i>(<span>10</span>)</i>-->
+                    </li>
+                </ul>
+                <div class="income" data-element="incomeNode"><span><%=$ln('持仓盈亏')%>:</span><span
+                        v-param="holdIncome"></span></div>
+                <div class="UI-Button" data-events="click:soldAllConfirm;" data-element="soldAllNode">
+                    <div><%=$ln('一键平仓')%></div>
+                </div>
+            </div>
+            <div class="tableArea">
+                <table class="info">
+                    <tr>
+                        <th><%=$ln('交易ID')%></th>
+                        <th><%=$ln('开仓时间')%></th>
+                        <th><%=$ln('交易商品')%></th>
+                        <th><%=$ln('买卖')%></th>
+                        <th><%=$ln('保证金')%></th>
+                        <th><%=$ln('止损价格')%></th>
+                        <th><%=$ln('止盈价格')%></th>
+                        <th><%=$ln('模式')%></th>
+                        <th><%=$ln('开仓价')%></th>
+                        <th><%=$ln('当前盈亏')%></th>
+                        <th><%=$ln('操作')%></th>
+                        <th><%=$ln('状态')%></th>
+                    </tr>
+                    <tr>
+                        <td colspan="12"><%=$ln('暂无订单')%></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

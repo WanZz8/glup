@@ -1,0 +1,12 @@
+<div class="page-mine-index">
+	<div class="wrap">
+		<div class="menu">
+			<ul>
+				<li class="<%=selected.indexOf('mine-setting') !== -1?'active':''%>" data-events="click:switch;" data-bind="mine-setting-info"><%=$ln('个人设置')%></li>
+				<li class="<%=selected === 'mine-fund'?'active':''%>" data-events="click:switch;" data-bind="mine-fund"><%=$ln('资金明细')%></li>
+				<li class="<%=selected.indexOf('mine-agency') !== -1?'active':''%>" data-events="click:switch;" data-bind="mine-agency-user"><%=$ln('代理中心')%></li>
+			</ul>
+		</div>
+		<div class="main" id="mine"></div>
+	</div>
+</div>

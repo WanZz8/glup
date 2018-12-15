@@ -1,0 +1,50 @@
+<ul class="detail">
+    <li>
+        <div class="name"><%=$ln('开盘')%></div>
+        <div class="value"><%= q.open ? q.open.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('昨收')%></div>
+        <div class="value"><%= q.close ? q.close.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('涨跌')%></div>
+        <div class="value <%=isUp === true ? 'rise':'fall'%>"><%=q.price.sub(q.settle_price_yes)%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('涨幅')%></div>
+        <div class="value <%=isUp === true ? 'rise':'fall'%>"><%=percent%>%</div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('最高')%></div>
+        <div class="value <%=q.max > q.settle_price_yes ? 'rise' : 'fall'%>"> <%= q.max ? q.max.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('最低')%></div>
+        <div class="value fall"><%= q.min ? q.min.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('涨停')%></div>
+        <div class="value"><%= q.high_limit ? q.high_limit.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('跌停')%></div>
+        <div class="value"><%=q.low_limit ? q.low_limit.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('今结')%></div>
+        <div class="value"><%=q.settle_price ? q.settle_price.toFixed(unit) : '-'%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('昨结')%></div>
+        <div class="value"><%=q.settle_price_yes.toFixed(unit)%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('持仓')%></div>
+        <div class="value"><%=q.hold_volume%></div>
+    </li>
+    <li>
+        <div class="name"><%=$ln('总手')%></div>
+        <div class="value"><%=q.volume%></div>
+    </li>
+</ul>

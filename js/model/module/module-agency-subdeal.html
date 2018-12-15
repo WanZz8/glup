@@ -1,0 +1,33 @@
+<table>
+	<tr>
+		<th>用户名</th>
+		<th>商品</th>
+		<th>多/空</th>
+		<th>手数</th>
+		<th>模式</th>
+		<th>状态</th>
+		<th>交易时间</th>
+	</tr>
+	<% if(list.length==0){%>
+	<tr>
+		<td colspan="7">暂无下级交易数据</td>
+	</tr>
+	<% } %>
+	<% for(var i=0,len=list.length;i<len;i++){%>
+	<% var item = list[i];%>
+	<% var time = $tool().formatDate(item.createTime.time, "y-m-d h:i:s");%>
+	<tr>
+		<td><%=item.username%></td>
+		<td><%=item.commodity%></td>
+		<%if(item.isBuy==1){%>
+			<td style="color: #fa4254;">多</td>
+		<%} else {%>
+			<td style="color: #00b38f;">空</td>
+		<%}%>
+		<td><%=item.volume%></td>
+		<td><%=(item.moneyType==0?'元':'角')%></td>
+		<td><%=item.tradeMsg%></td>
+		<td><%=time%></td>
+	</tr>
+	<% } %>
+</table>

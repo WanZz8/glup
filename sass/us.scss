@@ -1,0 +1,58 @@
+@import "variable";
+.page-us{
+    width: 100%;
+    background: $bgColor;
+    padding-bottom: rem(5px);
+    .banner{
+        img{
+            width: 100%;
+        }
+    }
+    .body{
+        width: rem(1200px);
+        background-color: #fff;
+        margin: 0 auto;
+        padding-bottom: rem(5px);
+        margin-bottom: rem(15px);
+        .security01{
+            background:url(../images/security01.jpg) no-repeat center;
+            height: 200px;
+        }
+        .security02{
+            background:url(../images/security02.jpg) no-repeat center;
+            height: 228px;
+        }
+        .security03{
+            background:url(../images/security03.jpg) no-repeat center;
+            height: 177px;
+        }
+        .security04{
+            background:url(../images/security04.jpg) no-repeat center;
+            height: 190px;
+        }
+        .security05{
+            background:url(../images/security05.jpg) no-repeat center;
+            height: 213px;
+        }
+        .about01{
+            background:url(../images/about01.jpg) no-repeat center;
+            height: 261px;
+        }
+        .about02{
+            background:url(../images/about02.jpg) no-repeat center;
+            height: 241px;
+        }
+        .about03{
+            background:url(../images/about03.jpg) no-repeat center;
+            height: 225px;
+        }
+        .about04{
+            background:url(../images/about04.jpg) no-repeat center;
+            height: 214px;
+        }
+        .about05{
+            background:url(../images/about05.jpg) no-repeat center;
+            height: 225px;
+        }
+    }
+}

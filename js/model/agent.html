@@ -1,0 +1,16 @@
+<div class="agent">
+    <div class="wrap">
+        <div class="body">
+            <div class="main">
+                <div class="title">代理中心</div>
+                <div>
+                    <input type="text" placeholder="请输入手机号" class="UI-Input" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" v-input="mobile" maxlength="11">
+                    <input type="password" placeholder="请输入密码" class="UI-Input" maxlength="20" v-input="password">
+                </div>
+                <div class="UI-Button" data-events="click:submit;">
+                    <div>登录</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

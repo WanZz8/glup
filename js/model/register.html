@@ -1,0 +1,231 @@
+<div class="page-register">
+    <div class="body">
+        <div class="tab">
+            <div class="index">
+                <div class="line"></div>
+                <ul class="part">
+                    <li class="<%if(index==0){%>active<%}%>">
+                        <div class="step">1</div>
+                        <span class="name">新建账户</span>
+                    </li>
+                    <li class="<%if(index==1){%>active<%}%>">
+                        <div class="step">2</div>
+                        <span class="name">密码设置</span>
+                    </li>
+                    <!--<li class="<%if(index==2){%>active<%}%>">-->
+                        <!--<div class="step">3</div>-->
+                        <!--<span class="name">身份证信息</span>-->
+                        <!--<span class="alert <%if(index>2&&input.name===null){%>display<%}%>">（已忽略）</span>-->
+                    <!--</li>-->
+                    <!--<li class="<%if(index==3){%>active<%}%>">-->
+                        <!--<div class="step">4</div>-->
+                        <!--<span class="name">绑定银行卡</span>-->
+                        <!--<span class="alert <%if(index>3&&input.name===null){%>display<%}%>">（已忽略）</span>-->
+                    <!--</li>-->
+                    <li class="<%if(index==2){%>active<%}%>">
+                        <div class="step">3</div>
+                        <span class="name"><%if(index==2){%>恭喜您！注册成功<%}else{%>完成<%}%></span>
+                        <!--<span class="alert <%if(index==2&&input.name===null){%>display<%}%>">（待完善）</span>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <ul class="part">
+                <li class="<%if(index==0){%>active<%}%>">
+                    <div class="phone">
+                        <div class="row">
+                            <label for=""><%=$ln('手机号码')%>：</label>
+                            <input type="text" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('手机号码')%>"
+                                   maxlength="11" v-input="phone">
+                            <span class="alert" v-param="phone"></span>
+                        </div>
+                        <div class="row">
+                            <label for="">图片验证码：</label>
+                            <input type="text" class="UI-Input" placeholder="请输入图片验证码" maxlength="4" v-input="imgCode">
+                            <span class="alert" v-param="imgCode"></span>
+                            <img src="/api/vf/verifyCode.jpg" alt="" data-element="imgNode"
+                                 data-events="click:getImgCode;" class="imgCode">
+                        </div>
+                        <div class="row">
+                            <label for=""><%=$ln('验证码')%>：</label>
+                            <input type="text" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('验证码')%>"
+                                   maxlength="4" v-input="captcha">
+                            <span class="alert" v-param="captcha"></span>
+                            <div class="UI-Button captcha" data-events="click:getCaptcha;" data-element="captchaNode">
+                                <div>发送</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="link"><input type="checkbox" checked="checked" data-element="agree"> 我已阅读并同意<a
+                                    href="#agreement">《用户协议》</a></span>
+                        </div>
+                        <div class="row">
+                            <div class="UI-Button next" data-events="click:verify;">
+                                <div><%=$ln('下一步')%></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="link"><%=$ln('如需帮助，请')%><a class="live-chat" data-events="click:openChat;"><%=$ln('联系客服')%></a></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="<%if(index==1){%>active<%}%>">
+                    <div class="password">
+                        <div class="row">
+                            <label for=""><%=$ln('昵称')%>：</label>
+                            <input type="text" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('昵称')%>"
+                                   v-input="username" maxlength="12">
+                            <span class="alert" v-param="username"></span>
+                        </div>
+                        <div class="row">
+                            <label for=""><%=$ln('密码')%>：</label>
+                            <input type="password" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('新密码')%>"
+                                   v-input="password" maxlength="12">
+                            <span class="alert" v-param="password"></span>
+                        </div>
+                        <div class="row">
+                            <label for=""><%=$ln('再次输入')%><%=$ln('密码')%>：</label>
+                            <input type="password" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('新密码')%>"
+                                   v-input="confirm" maxlength="12">
+                            <span class="alert" v-param="confirm"></span>
+                        </div>
+                        <div class="row">
+                            <div class="UI-Button next" data-events="click:register;">
+                                <div><%=$ln('下一步')%></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="link"><%=$ln('如需帮助，请')%><a class="live-chat" data-events="click:openChat;"><%=$ln('联系客服')%></a></span>
+                        </div>
+                    </div>
+                </li>
+                <!--<li class="<%if(index==2){%>active<%}%>">-->
+                    <!--<div class="identity">-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('姓名')%>：</label>-->
+                            <!--<input type="text" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('真实姓名')%>"-->
+                                   <!--v-input="name" maxlength="6">-->
+                            <!--<span class="alert" v-param="name"></span>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('身份证号')%>：</label>-->
+                            <!--<input type="text" class="UI-Input" placeholder="<%=$ln('请输入')%><%=$ln('身份证号')%>"-->
+                                   <!--v-input="identityNumber" maxlength="18">-->
+                            <!--<span class="alert" v-param="identityNumber"></span>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<div class="UI-Button next" data-events="click:authIdentity;">-->
+                                <!--<div><%=$ln('下一步')%></div>-->
+                            <!--</div>-->
+                            <!--<div class="UI-Button hollow" data-events="click:giveUp;">-->
+                                <!--<div><%=$ln('忽略')%></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<span class="link"><%=$ln('如需帮助，请')%><a class="live-chat" data-events="click:openChat;"><%=$ln('联系客服')%></a></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="<%if(index==3){%>active<%}%>">-->
+                    <!--<div class="bankcard">-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('开户名')%>：</label>-->
+                            <!--<input type="text" class="UI-Input" value="<%=input.name%>" disabled="disabled">-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('开户银行')%>：</label>-->
+                            <!--<select name="" id="" class="UI-Select" <%if(input.name===null){%>disabled="disabled"<%}%>>-->
+                                <!--<option value="工商银行">工商银行</option>-->
+                                <!--<option value="建设银行">建设银行</option>-->
+                                <!--<option value="农业银行">农业银行</option>-->
+                                <!--<option value="招商银行">招商银行</option>-->
+                                <!--<option value="中国银行">中国银行</option>-->
+                                <!--<option value="交通银行">交通银行</option>-->
+                                <!--<option value="邮政银行">邮政银行</option>-->
+                                <!--<option value="民生银行">民生银行</option>-->
+                                <!--<option value="浦发银行">浦发银行</option>-->
+                                <!--<option value="兴业银行">兴业银行</option>-->
+                                <!--<option value="华夏银行">华夏银行</option>-->
+                                <!--<option value="光大银行">光大银行</option>-->
+                                <!--<option value="广发银行">广发银行</option>-->
+                                <!--<option value="中信银行">中信银行</option>-->
+                                <!--<option value="平安银行">平安银行</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                        <!--<div class="row parallel">-->
+                            <!--<label for=""><%=$ln('开户所在地')%>：</label>-->
+                            <!--<div class="inside">-->
+                                <!--<select class="UI-Select" <%if(input.name===null){%>disabled="disabled"<%}%>-->
+                                <!--data-events="change:switchProvince;">-->
+                                <!--<% for(var i = 0,len = province.length;i < len;i++){ %>-->
+                                <!--<option value="<%=i%>"><%=province[i]%></option>-->
+                                <!--<% } %>-->
+                                <!--</select>-->
+                                <!--<select class="UI-Select" <%if(input.name===null){%>disabled="disabled"<%}%>-->
+                                <!--data-element="cityNode">-->
+                                <!--<% for(var i = 0,len = city.length;i < len;i++){ %>-->
+                                <!--<option value="<%=i%>"><%=city[i]%></option>-->
+                                <!--<% } %>-->
+                                <!--</select>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('开户支行')%>：</label>-->
+                            <!--<input type="text" class="UI-Input" maxlength="10"-->
+                                   <!--placeholder="<%=$ln('请输入')%><%=$ln('开户支行')%>"-->
+                            <!--<%if(input.name===null){%>disabled="disabled"<%}%> v-input='subbranch'>-->
+                            <!--<span class="alert" v-param="subbranch"></span>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('银行卡号')%>：</label>-->
+                            <!--<input type="text" class="UI-Input" maxlength="19"-->
+                                   <!--placeholder="<%=$ln('请输入')%><%=$ln('银行卡号')%>"-->
+                            <!--<%if(input.name===null){%>disabled="disabled"<%}%> v-input='cardNumber'>-->
+                            <!--<span class="alert" v-param="cardNumber"></span>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<label for=""><%=$ln('确认卡号')%>：</label>-->
+                            <!--<input type="text" class="UI-Input" maxlength="19"-->
+                                   <!--placeholder="<%=$ln('请再次确认')%><%=$ln('银行卡号')%>"-->
+                            <!--<%if(input.name===null){%>disabled="disabled"<%}%> v-input='cardNumberCfm'>-->
+                            <!--<span class="alert" v-param="cardNumberCfm"></span>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<div class="UI-Button next <%if(input.name===null){%>disabled<%}%>"-->
+                                 <!--data-events="click:addBankcard;">-->
+                                <!--<div><%=$ln('下一步')%></div>-->
+                            <!--</div>-->
+                            <!--<div class="UI-Button hollow" data-events="click:ignoreStep;">-->
+                                <!--<div><%=$ln('忽略')%></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<span class="link"><%=$ln('如需帮助，请')%><a class="live-chat" data-events="click:openChat;"><%=$ln('联系客服')%></a></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <li class="<%if(index==2){%>active<%}%>">
+                    <div class="finish">
+                        <div class="row">
+                            <span class="countdown"><i v-param="countdown"></i>秒后返回</span>
+                        </div>
+                        <div class="row">
+                            <a class="UI-Button" href="#home">
+                                <div><%=$ln('返回首页')%></div>
+                                <i class="icon icon-back3"></i>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <span class="link"><%=$ln('如需帮助，请')%><a class="live-chat" data-events="click:openChat;"><%=$ln('联系客服')%></a></span>
+                        </div>
+                        <div class="row">
+                            <img src="images/activity/register.jpg" alt="">
+                            <span class="link">点击查看相关信息</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

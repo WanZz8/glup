@@ -1,0 +1,212 @@
+@import "variable";
+.page-calendar{
+    width: 100%;
+    background: $bgColor;
+    overflow: hidden;
+    .banner {
+        width: 100%;
+        height: rem(400px);
+        background: url(../images/calendar-bg.png);
+        .search {
+            width: rem(1200px);
+            margin: 0 auto;
+            display: flex;
+            &:after{
+                clear: both;
+            }
+            .banner-left{
+                -webkit-box-flex: 0.6;
+                -webkit-flex: 0.6;
+                flex: 0.6;
+                h5{
+                    display: block;
+                    //padding: rem(63px) 0px 0px rem(63px);
+                    padding: rem(105px) 0px 0px rem(63px);
+                    font-size: rem(66px);
+                    color: #fff;
+                }
+                input{
+                    margin-top: rem(15px);
+                }
+                input[type="text"] {
+                    width: rem(185px);
+                    height: rem(40px);
+                    border: none;
+                    cursor: pointer;
+                    padding-left: rem(40px);
+                    margin-left: rem(63px);
+                    border-radius: rem(5px) 0px 0px rem(5px);
+                    background-image: url(../images/059.png);
+                    background-repeat: no-repeat;
+                    background-position: rem(8px) rem(8px);
+                }
+                input[type="button"]{
+                    width: rem(100px);
+                    padding-top:-1px;
+                    height: rem(41px);
+                    margin-left: rem(-8px);
+                    border: none;
+                    color: #fff;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 0px rem(5px) rem(5px) 0px;
+                    background-color: #d1a24c;
+                }
+            }
+            .banner-right{
+                -webkit-box-flex: 0.4;
+                -webkit-flex: 0.4;
+                flex: 0.4;
+                text-align: right;
+                padding-top: rem(28px);
+            }
+        }
+
+        .week{
+            width: 100%;
+            background: #37485e;
+            float: left;
+            margin-top: rem(20px);
+            padding-bottom: rem(20px);
+            .main{
+                width: rem(1200px);
+                margin: 0 auto;
+                display: -webkit-box;
+                ul{
+                  padding-top: rem(30px);
+                  list-style: none;
+                  li{
+                    list-style: none;
+                    float: left;
+                    width: rem(114px);
+                    padding: rem(10px);
+                    border: 1px solid #fff;
+                    border-radius: rem(5px);
+                    color: #fff;
+                    font-size: rem(16px);
+                    text-align: center;
+                    margin-left: rem(22px);
+                    line-height: rem(30px);
+                    cursor: pointer;
+                  }
+                  .active{
+                    border: 1px solid #cfa65c;
+                    color: #cfa65c;
+                  }
+                  .week-left{
+                      width: rem(50px);
+                      padding-top: rem(24px);
+                      border: none;
+                  }
+                  .week-right{
+                      width: rem(50px);
+                      padding-top: rem(24px);
+                      border: none;
+                  }
+                }
+            }
+        }
+    }
+    .block{
+        width: 100%;
+        float: left;
+        background: #f1f1f1;
+        .body{
+            width: rem(1200px);
+            margin: 0 auto;
+            .hero-college {
+                position: relative;
+                background: #f7f7f7;
+                color: #333;
+                font-size: rem(20px);
+                margin-top: rem(22px);
+                padding: rem(7px);
+                padding-left: rem(30px);
+                border-radius: rem(5px) rem(5px) 0px 0px;
+            }
+            .hero-college:before{
+                content: "";
+                width: rem(3px);
+                background: #353f59;
+                height: rem(16px);
+                border-radius: rem(3px);
+                left: rem(18px);
+                top: rem(9px);
+                position: absolute;
+            }
+            .hero-college-un {
+                background: #fff;
+                border: 1px solid #e6e6e6;
+                border-radius: 0px 0px rem(5px) rem(5px);
+                width: 100%;
+                float: left;
+                .data{
+                    padding: rem(30px) rem(30px) rem(5px) rem(30px);
+                    &-main{
+                        width: 100%;
+                        display: block;
+                        table{
+                            width: 100%;
+                            border-collapse: collapse;
+                            color: #333;
+                            line-height: rem(30px);
+                            font-size: rem(14px);
+                            margin-bottom: rem(30px);
+                            td,th{
+                                text-align: center;
+                                display: table-cell;
+                                vertical-align: middle;
+                                padding: rem(10px) 0;
+                            }
+                            thead{
+                                background: #f9f9f9;
+                            }
+                            tbody tr{
+                                border-bottom: 1px solid #e6e6e6;
+                                .calender-right-border{
+                                    border-right: 1px solid #e6e6e6;
+                                }
+                                .arrow-right{
+                                    margin-left: rem(10px);
+                                }
+                                .calender-style-green{
+                                    border: 1px solid #24b166;
+                                    color: #24b166;
+                                    font-size: rem(12px);
+                                    padding: rem(5px) rem(6px);
+                                    border-radius: rem(5px);
+                                }
+                                .calender-style-red{
+                                    border: 1px solid #cc393e;
+                                    color: #cc393e;
+                                    font-size: rem(12px);
+                                    padding: rem(5px) rem(6px);
+                                    border-radius: rem(5px);
+                                }
+                                .calender-style-yellow{
+                                    border: 1px solid #fda838;
+                                    color: #fda838;
+                                    font-size: rem(12px);
+                                    padding: rem(5px) rem(6px);
+                                    border-radius: rem(5px);
+                                }
+                            }
+                        }
+                        .remark{
+                            display: inline-block;
+                            padding: rem(10px);
+                            background: #e6e6e6;
+                            border: 1px solid #e6e6e6;
+                            border-radius: rem(5px);
+                            margin: rem(10px) 0 rem(25px) 0;
+                            color: #c4c4c4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .padding30{
+        padding-bottom: 30px;
+    }
+}

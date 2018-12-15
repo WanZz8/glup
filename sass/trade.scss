@@ -1,0 +1,882 @@
+@import "variable";
+
+$s-mainColor: #fff;
+$s-titleColor: #2d2d2d;
+$rise: #e34c4c;
+$fall: #00b38f;
+$tips: #fa3448;
+.trade {
+  background-color: $bgColor;
+  .rise {
+    color: $rise !important;
+  }
+  .fall {
+    color: $fall !important;
+  }
+  &.simulate {
+    .title {
+      &.chart, &.dyn {
+        background-color: #b59457 !important;
+        color: #fff !important;
+        &:before {
+          background-color: #fff !important;
+        }
+      }
+    }
+    .category {
+      background-color: #b59457 !important;
+      color: #fff !important;
+      &:hover {
+        background-color: #C7A65B !important;
+      }
+    }
+  }
+  .broadcast{
+    height:rem(40px);
+    line-height:rem(40px);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    .streaming{
+      height:rem(40px);
+      line-height:rem(40px);
+      white-space:nowrap;
+      left: 100%;
+      transition:-webkit-transform linear;
+      transition:transform linear;
+      position: absolute;
+      color: #d1a24c;
+      font-size:rem(16px);
+      >span{
+        font-weight: bold;
+      }
+    }
+  }
+  .wrap {
+    width: rem(1200px);
+    margin: 0 auto;
+    //padding: rem(20px) 0;
+    > table {
+      width: 100%;
+      height: rem(800px);
+      vertical-align: middle;
+      font-size: 0;
+      td {
+        vertical-align: middle;
+      }
+      .quoteList {
+        width: rem(154px);
+        margin-right: rem(3px);
+        height: 100%;
+        text-align: center;
+        .category {
+          position: relative;
+          height: rem(62px);
+          line-height: rem(62px);
+          background-color: $s-titleColor;
+          color: #c4c4c4;
+          font-size: rem(18px);
+          cursor: pointer;
+          margin-bottom: 1px;
+          &:after {
+            content: '\276D';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: rem(20px);
+            font-size: rem(24px);
+            transform-origin: center center;
+            transform: rotate(90deg);
+          }
+          &:hover {
+            background-color: lighten($s-titleColor, 5%);
+          }
+          &.active {
+            &:after {
+              transform: rotate(270deg);
+            }
+            + .list {
+              height: rem(548px);
+              //height: rem(611px);
+              overflow-y: auto;
+            }
+          }
+        }
+        .list {
+          height: 0;
+          -webkit-transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+          transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+          background-color: $s-mainColor;
+          overflow: hidden;
+          > li {
+            position: relative;
+            cursor: pointer;
+            height: rem(82px);
+            line-height: rem(82px);
+            border-bottom: 1px dashed rgba(255, 255, 255, 1);
+            margin-left: rem(2px);
+            > a {
+              cursor: pointer;
+            }
+            &:hover {
+              background: rgba(0, 0, 0, .2);
+            }
+            &.active {
+              background: rgba(0, 0, 0, .15);
+              //&:before {
+              //  content: '';
+              //  position: absolute;
+              //  top: 0;
+              //  left: 0;
+              //  height: 100%;
+              //  width: rem(4px);
+              //  background-color: $tips;
+              //}
+            }
+            .rest {
+              .price {
+                color: $activeColor;
+              }
+            }
+            .name {
+              height: rem(28px);
+              line-height: rem(28px);
+              padding-top: rem(5px);
+              text-align: center;
+              font-size: 0;
+              color: #2f2f2f !important;
+              .inner {
+                position: relative;
+                display: inline;
+                font-size: rem(16px);
+              }
+              .table {
+                position: absolute;
+                bottom: 0;
+                left: 100%;
+              }
+            }
+            .price {
+              font-size: rem(18px);
+              height: rem(22px);
+              line-height: rem(22px);
+            }
+            .rate {
+              font-size: rem(14px);
+              height: rem(18px);
+              line-height: rem(18px);
+            }
+          }
+        }
+      }
+      .bg {
+        background-color: $s-mainColor;
+        position: relative;
+        height: rem(800px);
+        margin-right: rem(3px);
+        //&:before {
+        //  @extend .Miscellaneous;
+        //  z-index: 0;
+        //}
+      }
+      .quotes {
+        position: relative;
+        width: rem(830px);
+        height: rem(443px);
+        margin: 0 rem(14px);
+        //padding-top: rem(13px);
+        padding-top: rem(3px);
+        font-size: rem(12px);
+        border-bottom: 2px solid #e1e1e1;
+        color: #666666;
+        .live {
+          display: inline-block;
+          float: right;
+          > li {
+            display: inline-block;
+            height: rem(32px);
+            line-height: rem(32px);
+            padding-right: rem(10px);
+            font-size: rem(24px);
+            color: $uiColor;
+            text-indent: 0;
+          }
+        }
+        .trend {
+          height: rem(396px);
+          border: 1px solid #e6e6e6;
+          //margin-top: rem(10px);
+          border-top: 1px dashed #515151;
+        }
+        .volume {
+          font-size: rem(16px);
+          color: #c3c3c3;
+          text-align: center;
+          margin-top: rem(14px);
+          > div {
+            display: inline-block;
+            vertical-align: middle;
+            > div {
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+          .right {
+            text-align: left;
+            width: rem(388px);
+          }
+          .left {
+            text-align: right;
+            width: rem(388px);
+          }
+          .mid {
+            text-align: center;
+            width: rem(54px);
+          }
+          .riseVolume {
+            background-color: $rise;
+            height: 4px;
+            width: 103px;
+            border-radius: 4px;
+          }
+          .fallVolume {
+            background-color: $fall;
+            height: 4px;
+            width: 60px;
+            border-radius: 4px;
+          }
+          .rise {
+            color: $rise;
+          }
+          .fall {
+            color: $fall;
+          }
+        }
+        .UI-Tab {
+          &.timeLine {
+            .btn {
+              background: #efefef;
+              border-color: #e3e3e3;
+              &.active {
+                background: $activeColor;
+                border-color: $activeColor;
+              }
+            }
+          }
+        }
+      }
+      .title {
+        position: relative;
+        height: rem(44px);
+        line-height: rem(44px);
+        font-size: rem(18px);
+        letter-spacing: 1px;
+        color: #909090;
+        text-indent: rem(40px);
+        &.chart {
+          height: rem(62px);
+          line-height: rem(62px);
+          background-color: $s-titleColor;
+          color: #bdbdbd;
+          &:before {
+            background-color: #bdbdbd;
+          }
+          span {
+            position: absolute;
+            right: rem(18px);
+            cursor: pointer;
+          }
+        }
+        &.dyn {
+          position: relative;
+          height: rem(62px);
+          line-height: rem(62px);
+          background-color: $s-titleColor;
+          color: #c4c4c4;
+          font-size: rem(18px);
+          &:before {
+            //@extend .Miscellaneous;
+            background-color: #bdbdbd;
+          }
+        }
+        &:before {
+          display: block;
+          content: '';
+          width: 4px;
+          height: 40%;
+          position: absolute;
+          background-color: #464646;
+          left: rem(24px);
+          top: 30%;
+        }
+      }
+      .deal {
+        position: relative;
+        width: rem(830px);
+        height: rem(290px);
+        margin: 0 rem(14px);
+        font-size: rem(14px);
+        .sim-balance {
+          position: absolute;
+          display: none;
+          right: rem(10px);
+          top: 50%;
+          margin-top: rem(-15px);
+          height: rem(30px);
+          vertical-align: middle;
+          text-indent: 0;
+          .amount {
+            display: inline-block;
+            height: rem(30px);
+            line-height: rem(30px);
+            margin-right: rem(30px);
+            vertical-align: top;
+          }
+          .UI-Button {
+            display: inline-block;
+            position: relative;
+            height: rem(30px);
+            width: rem(85px);
+            vertical-align: top;
+            > div {
+              line-height: rem(30px);
+              font-size: rem(14px);
+              text-align: center;
+            }
+            &:hover {
+              .tips {
+                display: block;
+              }
+            }
+            .tips {
+              position: absolute;
+              display: none;
+              top: 140%;
+              right: 0;
+              color: #fff;
+              background: #373530;
+              z-index: 1;
+              width: rem(268px);
+              height: rem(64px);
+              text-align: left;
+              padding: 0 rem(6px);
+              &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: rem(-10px);
+                right: rem(24px);
+                width: 0;
+                height: 0;
+                border-left: rem(10px) solid transparent;
+                border-right: rem(10px) solid transparent;
+                border-bottom: rem(10px) solid #373530;
+              }
+            }
+          }
+        }
+        .contract {
+          position: relative;
+          border-top: 1px dashed #515151;
+          color: #8e8e8e;
+          .controller {
+            position: absolute;
+            top: rem(74px);
+            right: rem(10px);
+            .UI-Button {
+              position: relative;
+              font-size: rem(16px);
+              > div {
+                color: #fff;
+              }
+              &:hover {
+                .tips {
+                  display: block;
+                }
+              }
+              .tips {
+                position: absolute;
+                display: none;
+                top: rem(5px);
+                left: 110%;
+                color: #fff;
+                background: $activeColor;
+                border: 1px solid $activeColor;
+                z-index: 1;
+                width: rem(170px);
+                height: rem(40px);
+                line-height: rem(40px);
+                text-align: center;
+                padding: 0 rem(6px);
+                &:after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  top: 50%;
+                  margin-top: rem(-10px);
+                  left: rem(-10px);
+                  width: 0;
+                  height: 0;
+                  border-right: rem(10px) solid $activeColor;
+                  border-bottom: rem(10px) solid transparent;
+                  border-top: rem(10px) solid transparent;
+                }
+              }
+            }
+            .buyRise {
+              background-color: $rise;
+              margin-bottom: rem(15px);
+            }
+            .buyFall {
+              background-color: $fall;
+            }
+          }
+          .row {
+            height: rem(32px);
+            line-height: rem(32px);
+            margin-top: rem(8px);
+            vertical-align: middle;
+            color: #2f2f2f;
+            &.last {
+              position: absolute;
+              right: rem(10px);
+              bottom: 0;
+            }
+            .name {
+              display: inline-block;
+            }
+            .des {
+              display: inline-block;
+              color: #5c5c5c;
+            }
+          }
+          .UI-Tab {
+            &.switch {
+              position: absolute;
+              top: rem(10px);
+              right: rem(10px);
+              .btn {
+                //color: rgba(255, 255, 255, 0.53);
+                width: rem(85px);
+                font-size: rem(16px);
+                //background-color: #b39259;
+                //border: 0;
+                //&.active {
+                //  color: #ffffff;
+                //  background-color: #d1a24c;
+                //}
+                //&:hover {
+                //  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.2);
+                //}
+              }
+            }
+            //&.amount {
+            //  .btn {
+            //    &.active {
+            //      color: #f54c4c;
+            //    }
+            //  }
+            //}
+            &.stopLoss {
+              .btn {
+                width: auto;
+                min-width: rem(60px);
+                padding: 0 rem(16px);
+                //&.active {
+                //  color: #00b78e;
+                //}
+              }
+            }
+          }
+        }
+      }
+      .dynamic {
+        position: relative;
+        width: rem(180px);
+        height: rem(800px);
+        font-size: rem(14px);
+        background-color: $s-mainColor;
+        .detail {
+          font-size: 0;
+          vertical-align: middle;
+          .name, .value {
+            display: inline-block;
+            font-size: rem(16px);
+            height: rem(55px);
+            line-height: rem(55px);
+            color: #2f2f2f;
+          }
+          .name {
+            width: rem(70px);
+            text-align: center;
+            margin-left: rem(15px);
+          }
+          .value {
+            text-align: left;
+            width: rem(95px);
+          }
+        }
+        .tips {
+          padding-left: rem(35px);
+          line-height: rem(25px);
+          font-size: rem(12px);
+          color: $tips;
+        }
+      }
+    }
+    .storage {
+      margin-top: rem(15px);
+      .tab {
+        height: rem(62px);
+        line-height: rem(62px);
+        background-color: #f7f7f7;
+        position: relative;
+        ul {
+          li {
+            display: inline-block;
+            min-width: rem(170px);
+            position: relative;
+            text-align: center;
+            &:after {
+              content: '';
+              display: block;
+              width: 1px;
+              height: rem(16px);
+              background: #e6e6e6;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              margin-top: rem(-8px);
+            }
+            &.active {
+              > span {
+                color: #fa3448;
+              }
+            }
+            > span {
+              color: #676767;
+              font-size: rem(16px);
+              cursor: pointer;
+            }
+          }
+        }
+        .income {
+          position: absolute;
+          font-size: rem(16px);
+          height: rem(40px);
+          line-height: rem(40px);
+          display: inline-block;
+          min-width: rem(140px);
+          top: rem(11px);
+          right: rem(240px);
+          text-align: center;
+          > span {
+            display: inline-block;
+            > i {
+              color: $rise;
+              font-family: Arial;
+              font-weight: normal;
+              font-size: rem(16px);
+              display: inline-block;
+              height: rem(40px);
+              line-height: rem(40px);
+            }
+            > b {
+              color: $fall;
+              font-family: Arial;
+              font-weight: normal;
+              font-size: rem(16px);
+              display: inline-block;
+              height: rem(40px);
+              line-height: rem(40px);
+            }
+          }
+        }
+        .UI-Button {
+          position: absolute;
+          top: rem(11px);
+          right: rem(34px);
+          width: rem(140px);
+          height: rem(40px);
+          line-height: rem(40px);
+          background: transparent;
+          border: 1px solid #d8ad5f;
+          //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+          > div {
+            color: #d8ad5f;
+          }
+          &:active {
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            > div {
+              box-shadow: 0 0 5px;
+            }
+          }
+          &:hover {
+            > div {
+              background: transparent;
+              box-shadow: 0 0 10px;
+            }
+          }
+          &.disabled {
+            border: 1px solid #d9d9d9;
+          }
+        }
+      }
+      .tableArea {
+        background: #fff;
+        padding: rem(15px) 0;
+        border-top: 1px solid #e6e6e6;
+        text-align: center;
+        .info {
+          width: rem(1186px);
+          margin: 0 auto;
+          text-align: center;
+          table-layout: auto;
+          th, td {
+            font-size: rem(16px);
+            border: 1px solid #e6e6e6;
+            vertical-align: middle;
+          }
+          th {
+            color: #262626;
+            background: #ededed;
+            height: rem(46px);
+          }
+          td {
+            color: #111111;
+            height: rem(80px);
+            > .pop {
+              color: $activeColor;
+              cursor: pointer;
+            }
+          }
+          .disabled {
+            width: rem(72px);
+            height: rem(30px);
+            line-height: rem(30px);
+            font-size: rem(14px);
+          }
+          .setDetail {
+            width: rem(114px);
+            height: rem(30px);
+            line-height: rem(28px);
+            background: transparent;
+            border: 1px solid #d8ad5f;
+            //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            > div {
+              color: #d8ad5f;
+            }
+            &:active {
+              box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+              > div {
+                box-shadow: 0 0 5px;
+              }
+            }
+            &:hover {
+              > div {
+                background: transparent;
+                box-shadow: 0 0 10px;
+              }
+            }
+          }
+          .sold {
+            width: rem(72px);
+            height: rem(30px);
+            line-height: rem(28px);
+            background: transparent;
+            border: 1px solid #d8ad5f;
+            text-indent: rem(6px);
+            letter-spacing: rem(6px);
+            //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            > div {
+              //background: linear-gradient(to top, rgba(209, 162, 76, 0.4), rgba(255, 236, 200, 0.4));
+              color: #d8ad5f;
+
+            }
+            &:active {
+              box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+              > div {
+                box-shadow: 0 0 5px;
+              }
+            }
+            &:hover {
+              > div {
+                background: transparent;
+                box-shadow: 0 0 10px;
+              }
+            }
+          }
+        }
+        .UI-Page {
+          display: inline-block;
+          margin-top: rem(20px);
+        }
+      }
+      .setProfit {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        font-size: rem(12px);
+        transition: all 0.1s;
+        &.step {
+          display: table;
+        }
+        &.show {
+          .content {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            transition: all 0.3s;
+          }
+          .mask {
+            opacity: 1;
+            transition: all 0.3s;
+          }
+        }
+        .mask {
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          transition: all 0.3s;
+        }
+        .content {
+          display: table-cell;
+          vertical-align: middle;
+          z-index: 2;
+          transform: scale(0.5);
+          opacity: 0;
+          transition: all 0.3s;
+          .body {
+            width: rem(694px);
+            margin: 0 auto;
+            background-color: #a6a8a7;
+            padding: rem(8px);
+            .main {
+              height: 100%;
+              .head {
+                height: rem(60px);
+                line-height: rem(60px);
+                background-color: #e4e4e4;
+                font-size: rem(24px);
+                color: #4e4e4e;
+                text-align: center;
+                position: relative;
+                .table {
+                  height: rem(60px);
+                  line-height: rem(60px);
+                  position: absolute;
+                  right: rem(28px);
+                  top: 0;
+                  .icon {
+                    cursor: pointer;
+                  }
+                }
+              }
+              .area {
+                background-color: #fff;
+                padding-top: rem(32px);
+                .bar {
+                  width: rem(600px);
+                  min-height: rem(50px);
+                  line-height: rem(50px);
+                  margin: 0 auto rem(18px) auto;
+                  font-size: 0;
+                  position: relative;
+                  text-align: center;
+                  &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: rem(20px);
+                  }
+                  &.controller {
+                    text-align: center;
+                    margin-top: rem(40px);
+                  }
+                  > p {
+                    font-size: rem(14px);
+                    color: $fontColor;
+                    height: rem(20px);
+                    line-height: rem(20px);
+                    text-align: left;
+                    cursor: default;
+                    >a{
+                      color: $activeColor;
+                      cursor: pointer;
+                    }
+                  }
+                  > .left {
+                    display: inline-block;
+                    width: rem(122px);
+                    text-align: right;
+                    font-size: rem(16px);
+                    padding-right: rem(12px);
+                  }
+                  > .right {
+                    display: inline-block;
+                    width: rem(122px);
+                    text-align: left;
+                    font-size: rem(16px);
+                    padding-left: rem(12px);
+                  }
+                  > .mid {
+                    display: inline-block;
+                    width: rem(356px);
+                  }
+                  .range {
+                    width: rem(310px);
+                  }
+                  .operateCircle {
+                    width: rem(22px);
+                    height: rem(22px);
+                    line-height: rem(22px);
+                    vertical-align: middle;
+                    text-align: center;
+                    display: inline-block;
+                    border-radius: 50%;
+                    background: #e4e4e4;
+                    font-size: rem(21px);
+                    font-family: Arial;
+                    cursor: pointer;
+                    color: #fff;
+                  }
+
+                  .UI-Button {
+                    display: inline-block;
+                    width: rem(210px);
+                    height: rem(50px);
+                    line-height: rem(50px);
+                    font-size: rem(18px);
+                    margin: 0 rem(15px);
+                    > div {
+                      text-align: center;
+                      text-align-last: center;
+                    }
+                  }
+                }
+              }
+              .foot {
+                height: rem(48px);
+                line-height: rem(48px);
+                background-color: #f6f6f6;
+                .bar {
+                  width: rem(350px);
+                  height: rem(50px);
+                  line-height: rem(50px);
+                  margin: 0 auto;
+                  font-size: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

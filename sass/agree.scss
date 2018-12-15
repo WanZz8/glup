@@ -1,0 +1,44 @@
+@import "variable";
+.page-agree{
+    width: 100%;
+    background: #2a2a2a;
+    padding-bottom: rem(5px);
+    padding: rem(20px) 0;
+    color: #fff;
+    .head{
+        width: rem(1200px);
+        font-size: rem(18px);
+        margin: 0 auto;
+        padding: rem(20px);
+        background-color: #0c0c0c;
+        text-align: center;
+    }
+    .wrap{
+        width: rem(1200px);
+        margin: rem(15px) auto;
+        background-color: #0c0c0c;
+        color: #fff;
+        padding: rem(10px) rem(20px) rem(50px) rem(20px);
+        border-radius: rem(3px);
+        .title{
+            font-size: rem(16px);
+            margin-top: rem(15px);
+            line-height: rem(32px);
+        }
+        .subtitle{
+            font-size: rem(15px);
+            margin-top: rem(5px);
+            line-height: rem(30px);
+        }
+        p{
+            font-size: rem(14px);
+            line-height: rem(28px);
+        }
+        .txt{
+            //text-indent: rem(30px);
+            margin-top: 5px;
+            font-size: 16px;
+            line-height: 36px;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@import "variable";
+.page-marketing{
+    img{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .banner{
+        position: relative;
+        span{
+            position: absolute;
+            top: 254px;
+            left: 50%;
+            margin-left: rem(140px);
+            width: rem(120px);
+            height: 46px;
+            cursor: pointer;
+            border: none;
+            border-radius: rem(40px);
+        }
+    }
+    .earnings{
+        background:url(../images/marketing/marketing01.jpg) no-repeat center;
+        height: 421px;
+    }
+    .how{
+        background:url(../images/marketing/marketing02.jpg) no-repeat center;
+        height: 712px;
+        position: relative;
+        span{
+            position: absolute;
+            top: 550px;
+            left: 50%;
+            margin-left: rem(-230px);
+            width: rem(510px);
+            height: 76px;
+            cursor: pointer;
+            border: none;
+            border-radius: rem(40px);
+        }
+        p{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: rem(18px);
+            color: #2f3234;
+            font-weight: 900;
+            bottom: 0;
+            height: 99px;
+            line-height: 99px;
+        }
+    }
+    .example01{
+        background:url(../images/marketing/marketing03.jpg) no-repeat center;
+        height: 463px;
+    }
+    .example02{
+        background:url(../images/marketing/marketing04.jpg) no-repeat center;
+        height: 386px;
+    }
+    .example03{
+        background:url(../images/marketing/marketing05.jpg) no-repeat center;
+        height: 366px;
+    }
+    .cando{
+        background:url(../images/marketing/marketing06.jpg) no-repeat center;
+        height: 1090px;
+        position: relative;
+        span{
+            position: absolute;
+            top: 930px;
+            left: 50%;
+            margin-left: rem(-250px);
+            width: rem(500px);
+            height: 76px;
+            cursor: pointer;
+            border: none;
+            border-radius: rem(40px);
+        }
+        p{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 0;
+            height: 100px;
+            line-height: 100px;
+            a{
+                color: #9f8155;
+                font-weight: 900;
+                font-size: rem(18px);
+            }
+        }
+    }
+    .choose{
+        background:url(../images/marketing/marketing07.jpg) no-repeat center;
+        height:667px;
+        position: relative;
+        span{
+            position: absolute;
+            top: 580px;
+            left: 50%;
+            margin-left: rem(-330px);
+            width: rem(660px);
+            height: 100px;
+            cursor: pointer;
+            border: none;
+            border-radius: rem(40px);
+        }
+    }
+    .opt{
+        width: 100%;
+        p{
+            width: 100%;
+            padding-top: 10px;
+            text-align: center;
+            height: 48px;
+            line-height: 48px;
+            a{
+                font-weight: 900;
+                color: #2f3234;
+                font-size: rem(18px);
+            }
+        }
+        .os{
+            display: flex;
+            display: -webkit-flex;
+            &-left{
+                flex: 0.5;
+                -webkit-box-flex: .5;
+                -webkit-flex: .5;
+                text-align: right;
+                padding-right: rem(47px);
+            }
+            &-right{
+                flex: 0.5;
+                -webkit-box-flex: .5;
+                -webkit-flex: .5;
+                padding-left: rem(47px);
+            }
+            img{
+                width: rem(176px);
+            }
+        }
+    }
+}

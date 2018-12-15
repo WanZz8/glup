@@ -1,0 +1,31 @@
+<% for(var i=0,len=list.length;i < len;i++){%>
+<% var item = list[i];%>
+<% var time = $tool().formatDate(item.time.time, "y-m-d h:i:s");%>
+<% if(item.status == 3 || item.status == 4) {%>
+	<li class="chat-txt-left" >
+		<div class="head-menu-left top-img">
+			<img src="./images/head.png" alt="">
+		</div>
+		<div class="online-customer-service">
+			<div class="gray-words">在线客服  <span><%=time%></span></div>
+			<div class="be-coming">
+				<span class="top-level"></span>
+				<p><%=item.content%></p>
+			</div>
+		</div>
+	</li>
+<% } else {%>
+	<li class="chat-txt-right">
+		<div class="head-menu-right top-img">
+			<img src="./images/averter.png" alt="">
+		</div>
+		<div class="online-service-right">
+			<div class="gray-words right-text">我  <span><%=time%></span></div>
+			<div class="few-questions">
+				<span class="right-level"></span>
+				<p><%=item.content%></p>
+			</div>
+		</div>
+	</li>
+<% }%>
+<% } %>

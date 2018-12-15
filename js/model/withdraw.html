@@ -1,0 +1,60 @@
+<div class="withdraw">
+    <div class="withdraw-body">
+        <div class="withdraw-body-right">
+            <div class="withdraw-head">
+                <img src="./images/logo/bank.png">
+                <span class="title">可提款余额</span>
+                <span class="finance">余额<label v-param="money">0.00</label>元</span>
+            </div>
+            <div class="withdraw-wrap">
+                <div class="method-list">
+                    <span>选择收款方式：</span>
+                    <ul>
+                        <li class="active" data-events="click:selectMethod;" data-bind="0">
+                            银行卡
+                        </li>
+                    </ul>
+                </div>
+                <div class="bank-list" data-element="bankNode" style="display: none;">
+                    <div class="bank-left">
+                        <span>选择银行卡：</span>
+                    </div>
+                    <div class="bank-right">
+                        <ul class="cardList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="QR" data-element="qrNode" style="display: none;">
+                    <span class="">收款码：</span>
+                    <div id="alipayQR"></div>
+                </div>
+                <div class="under-distance">
+                    <div class="tk-left">
+                        <span>提款金额：</span>
+                    </div>
+                    <div class="tk-right">
+                        <i>￥</i>
+                        <input type="number" class="input01" placeholder="请输入提款金额" v-input="money" v-min="100"
+                               maxlength="10">
+                        <span class="unit">元</span>
+                        <p class="limit">
+                            <img src="./images/turn-right.png" alt="">
+                            提取额度限定：最低 100.00 元
+                        </p>
+                    </div>
+                </div>
+                <div class="under-distance">
+                    <div class="tk-left">
+                        <span>提款密码：</span>
+                    </div>
+                    <div class="tk-right">
+                        <input type="password" class="input02" v-input="password" maxlength="16">
+                    </div>
+                </div>
+                <div class="next-step">
+                    <button type="submit" data-events="click:submit;">立即提取</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,228 @@
+<div class="home">
+    <div class="banner" data-element="bannerNode">
+        <div class="imgList swiper-container">
+            <div class="swiper-pagination"></div>
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="#activity" style="cursor: pointer">
+                        <img src="/images/banner/banner4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#activity" style="cursor: pointer">
+                        <img src="/images/banner/banner3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#sim-activity" style="cursor: pointer">
+                        <img src="/images/activity/banner.jpg" alt="" style="height: 440px">
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <img src="/images/banner/banner1.jpg" alt="">
+                </li>
+                <!--<li class="swiper-slide">-->
+                    <!--<img src="/images/banner/banner2.jpg" alt="">-->
+                <!--</li>-->
+                <li class="swiper-slide">
+                    <a href="#activity" style="cursor: pointer">
+                        <img src="/images/banner/banner5.jpg" alt="">
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#activity" style="cursor: pointer">
+                        <img src="/images/banner/banner6.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrap">
+            <div class="login" data-element="loginNode">
+                <div class="rel">
+                    <i class="icon icon-phone phone-pic"></i>
+                    <input type="text" placeholder="<%=$ln('请输入手机号')%>" maxlength="11" class="index-login-input input"
+                           onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" v-input="mobile">
+                </div>
+                <div class="rel">
+                    <i class="icon icon-pass pass-pic"></i>
+                    <input type="password" placeholder="<%=$ln('请输入密码')%>" class="input" maxlength="20"
+                           v-input="password">
+                </div>
+                <div class="remember-pass">
+                    <input type="checkbox" class="remember-box" data-element="rememberNode" id="remember">
+                    <label for="remember"></label>
+                    <span><%=$ln('记住密码')%></span>
+                </div>
+                <div class="login-btn" data-events="click:login;"><%=$ln('登录')%></div>
+                <div class="lastRow">
+                    <a href="#forget" class="aLink"><%=$ln('忘记密码')%>？</a>
+                    <a href="#register" class="btn"><%=$ln('注册')%></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="broadcast">
+        <div class="wrap">
+            <div class="table">
+                <div class="tableCell">
+                    <div class="center-notice-pic icon icon-voice"></div>
+                </div>
+            </div>
+            <div class="noticeModel"></div>
+            <div class="main-center-hint-right">
+                <a href="#notice-list" class="main-center-hint-right-a"><span>更多>></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="market">
+        <div class="wrap">
+            <div class="bazaar">
+                <div class="arrow button-prev">
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container quoteList">
+                    <ul class="tab-nav swiper-wrapper quoteNav">
+                        <li>| <%=$ln('热门行情')%></li>
+                        <li class="tips">更多行情获取中ing...</li>
+                    </ul>
+                </div>
+                <div class="arrow button-next">
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-prev flipX"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="quotes">
+                    <div class="category">
+                        <!--<div class="nav">-->
+                        <!--<div class="btn active" data-events="click:switchType;" data-bind="sline"><%=$ln('分时')%>-->
+                        <!--</div>-->
+                        <!--<div class="btn" data-events="click:switchType;" data-bind="kline"><%=$ln('日线')%><span-->
+                        <!--class="caret"></span></div>-->
+                        <!--<div class="btn" data-events="click:switchType;" data-bind="mkline1">1<%=$ln('分')%></div>-->
+                        <!--<div class="btn" data-events="click:switchType;" data-bind="mkline3">3<%=$ln('分')%></div>-->
+                        <!--<div class="btn" data-events="click:switchType;" data-bind="mkline5">5<%=$ln('分')%></div>-->
+                        <!--<div class="btn" data-events="click:switchType;" data-bind="mkline15">15<%=$ln('分')%></div>-->
+                        <!--<div class="btn end" data-events="click:switchType;" data-bind="tick"><%=$ln('闪电')%></div>-->
+                        <!--<div class="btn live"><%=$ln('持仓直播')%></div>-->
+                        <!--</div>-->
+                        <!--<ul class="statistics">-->
+                        <!--<li v-param="quote">46.58</li>-->
+                        <!--<li v-param="rate">+0.70</li>-->
+                        <!--<li v-param="percent">+1.53%</li>-->
+                        <!--</ul>-->
+                        <div class="trend" id="trend"></div>
+                    </div>
+                    <!--<div class="sales-volume">-->
+                    <!--<div class="left">-->
+                    <!--<div class="riseVolume" data-element="riseVolume"></div>-->
+                    <!--<div class="rise"><span v-param="buyVolume">26</span>/<span v-param="buy">46.75</span></div>-->
+                    <!--</div>-->
+                    <!--<div class="mid"><%=$ln('买卖量')%></div>-->
+                    <!--<div class="right">-->
+                    <!--<div class="fall"><span v-param="sell">46.75</span>/<span v-param="sellVolume">26</span>-->
+                    <!--</div>-->
+                    <!--<div class="fallVolume" data-element="fallVolume"></div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="left info">
+                <div class="title">| <%=$ln('资讯直播')%><a href="#news-list">更多>></a></div>
+                <div class="news">
+                    <!--<p>荷兰国际银行：预计2019年欧元区GDP增速为1.7%，此前预估为1.6%。<span>04:35</span></p>-->
+                </div>
+                <div class="goods">
+                    <span class="element active"><%=$ln('原油')%></span>
+                    <span class="element"><%=$ln('金银')%></span>
+                </div>
+                <ul class="goods-news">
+                    <!--<li>
+                        <div class="img">
+                            <img src="../images/germany.png" alt="">
+                        </div>
+                        <div class="link">
+                            <a href="#">德国财长朔伊布勒：法国当选总统马德国财长朔</a>
+                            <p>2017-05-10 22:33:55</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../images/yidu.png" alt="">
+                        </div>
+                        <div class="link">
+                            <a href="#">德国财长朔伊布勒：法国当选总统马德国财长朔</a>
+                            <p>2017-05-10 22:33:55</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../images/yilang.png" alt="">
+                        </div>
+                        <div class="link">
+                            <a href="#">德国财长朔伊布勒：法国当选总统马德国财长朔</a>
+                            <p>2017-05-10 22:33:55</p>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="guide">
+        <div class="wrap">
+            <div class="title">
+                致远学院
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="../images/introduce_1.jpg" alt="基础知识">
+                            <div class="subTitle">基础知识</div>
+                            <div class="brief">
+                                <a href="#school-detail?s=11" class="article">期货概念</a>
+                                <p>期货交易是在现货交易的基础上发展起来的、通过在期货交易所买卖标准化的期货合约而进行的一种有组织的交易方式。</p>
+                                <a href="#school-list?s=基础知识&t=新手入门">更多资讯 <span class="arrow">&#10148;</span></a>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="../images/introduce_2.jpg" alt="投资介绍">
+                            <div class="subTitle">投资介绍</div>
+                            <div class="brief">
+                                <a href="#school-detail?s=21" class="article">期货投机交易</a>
+                                <p>
+                                    期货投机交易指在期货市场上以获取价差收益为目的的期货交易行为。投机者根据自己对期货价格走势的判断，作出买进或卖出的决定，如果这种判断与市场价格走势相同，则投机者平仓出局后可获取投机利润</p>
+                                <a href="#school-list?s=投资介绍&t=新手入门">更多资讯 <span class="arrow">&#10148;</span></a>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="../images/introduce_3.jpg" alt="基本面分析">
+                            <div class="subTitle">基本面分析</div>
+                            <div class="brief">
+                                <a href="#school-detail?s=31" class="article">金融货币因素</a>
+                                <p>商品期货交易与金融货币市场有着紧密的联系。利率的高低、汇率的变动都直接影响商品期货价格变动。</p>
+                                <a href="#school-list?s=基本面分析&t=高手进阶">更多资讯 <span class="arrow">&#10148;</span></a>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="../images/introduce_4.jpg" alt="技术面分析">
+                            <div class="subTitle">技术面分析</div>
+                            <div class="brief">
+                                <a href="#school-detail?s=41" class="article">理论基础</a>
+                                <p>市场行为包容消化一切"构成了技术分析的基础。除非你已经完全理解和接受这个前提条件，否则学习技术分析就毫无意义。</p>
+                                <a href="#school-list?s=技术面分析&t=高手进阶">更多资讯 <span class="arrow">&#10148;</span></a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

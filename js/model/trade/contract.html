@@ -1,0 +1,40 @@
+<% if(moneyType === 1 && tradeType === 1){%>
+<div class="switch UI-Tab" data-element="modeNode"><span class="btn active" data-events="click:setMode;" data-bind="1">元</span><span class="btn" data-events="click:setMode;" data-bind="0.1">角</span></div>
+<% } %>
+<div class="controller">
+    <div class="UI-Button buyRise" data-events="click:trade;" data-bind="0"><div class="tips">点击此按钮立即下单</div><div>买涨（<span v-param="buy">10000.31</span>）</div></div>
+    <div class="UI-Button buyFall" data-events="click:trade;" data-bind="1"><div class="tips">点击此按钮立即下单</div><div>买跌（<span v-param="sell">10000.30</span>）</div></div>
+</div>
+<div class="row">
+    <div class="name"><span><%=commName%></span> - <span><%=contract%></span>合约：</div>
+    <div class="des">持仓至<span><%=closeTime%></span>自动平仓</div>
+</div>
+<div class="row">
+    <div class="name"><span>交易数量</span>：</div>
+    <ul class="amount UI-Tab">
+        <%for(var i = 0,len = volumeList.length;i < len;i++){%>
+        <li class="btn <%= i=== 0 ?'active':''%>" data-events="click:setVolume;" data-bind="<%=i%>"><%=volumeList[i]%>手</li>
+        <%}%>
+    </ul>
+</div>
+<div class="row">
+    <div class="name">触发止盈：</div>
+    <div class="stopWin des rise"><span v-param="stopProfitPrice"></span>元</div>
+</div>
+<div class="row">
+    <div class="name"><span>触发止损</span>：</div>
+    <ul class="stopLoss UI-Tab">
+        <%for(var i = 0,len = stopLossList.length;i < len;i++){%>
+        <li class="btn <%= i=== 0 ?'active':''%>" v-param="stopLoss-<%=i%>" data-events="click:setStopLoss;" data-bind="<%=i%>"></li>
+        <%}%>
+    </ul>
+</div>
+<div class="row">
+    支付 > 交易综合费：<span class="rise" v-param="chargeService"></span>元
+</div>
+<div class="row">
+    冻结 > 履约保证金：<span class="rise" v-param="price"></span>元<% if(isForeign){%>(<span><%=$currency()[currency].symbol%></span><span v-param="currencyPrice"></span>)<%}%>
+</div>
+<div class="row last">
+    (<%=commName%>按<%=$currency()[currency].name%>交易，平台以人民币结算  <% if(isForeign){%> <%=$currency()[currency].symbol%>1 = ¥<%=exgRate%> <%}%>)
+</div>

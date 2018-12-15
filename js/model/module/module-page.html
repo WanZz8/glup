@@ -1,0 +1,27 @@
+<% if(page.count > 0){ %>
+<% var length = 8,max = $tool().pageMax(page.count,page.size);%>
+<% var start = page.now-length/2>0?(page.now-length/2):1%>
+<% var end = start+length>max?max:(start+length)%>
+<table class="page-page">
+    <tr>
+        <td>
+            <div class="neighbor" data-bind="<%=page.now>1?(page.now-1):1%>" data-events="click:jump;">上一页</div>
+        </td>
+        <th>
+            <ul class="jump">
+                <% for(var i = start;i <= end;i++){ %>
+                <li <% if(i == page.now){ %> class="active" <% }else{ %> data-bind="<%=i%>" data-events="click:jump;" <% } %> ><%=i%></li>
+                <% } %>
+            </ul>
+        </th>
+        <td>
+            <div class="neighbor" data-bind="<%=page.now<max?(page.now+1):max%>"  data-events="click:jump;">下一页</div>
+        </td>
+        <td>
+            <input type="text" class="amount" oninput="if(value*1><%=max%>)value=<%=max%>" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" data-element="detailNode">
+        </td>
+        <td><div class="redirect" data-bind="detailNode" data-events="click:jump;">跳转</div></td>
+        <td class="total">共<span><%=max%></span>页</td>
+    </tr>
+</table>
+<% } %>

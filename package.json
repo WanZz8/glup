@@ -1,0 +1,55 @@
+{
+  "name": "mcm-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "gulp",
+    "test":"@echo off"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.neweb.me/wildechen/monaco1MobileFramework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "requirejs": "^2.3.2",
+    "sprity": "^1.0.8",
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-babili": "^0.1.4",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "imageinfo": "^1.0.4",
+    "less-plugin-autoprefix": "^1.5.1",
+    "run-sequence": "^1.2.2",
+    "through2": "^2.0.3",
+    "upng": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-babili": "^0.1.4",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "imageinfo": "^1.0.4",
+    "less-plugin-autoprefix": "^1.5.1",
+    "run-sequence": "^1.2.2",
+    "through2": "^2.0.3",
+    "upng": "^1.0.1"
+  }
+}

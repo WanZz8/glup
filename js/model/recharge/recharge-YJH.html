@@ -1,0 +1,18 @@
+	<div class="page-recharge-common">
+		<ul>
+			<li>
+				<div class="label">充值金额：</div>
+				<div class="inpt">
+					<input type="text" maxlength="8" v-input="money" placeholder="请输入金额" data-events="keyup:money;">
+				</div>
+			</li>
+		</ul>
+		<div class="opt"><button class="next" data-events="click:next;">下一步</button></div>
+		<div class="page-recharge-remark">
+			<h5>温馨提示：</h5>
+			<p>1）单笔最低100元，最高20000元，每日总额无上限</p>
+			<p>2）点击下一步后，将跳转到支付界面</p>
+			<p>3）<span class="yellow">0手续费</span>，付款成功后预计5分钟到账</p>
+			<p>4）如需帮助，请 <a href='javascript:document.getElementById("#chat").style.display=block;' pop="live-chat">联系客服</a></p>
+		</div>
+	</div>

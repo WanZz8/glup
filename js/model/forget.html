@@ -1,0 +1,99 @@
+<div class="page-forget">
+	<div class="wrap">
+		<table class="tab01" data-element="tab01">
+			<tr>
+				<td align="right"><span>手机号码：</span></td>
+				<td style="position: relative;">
+					<input type="text" placeholder="请输入手机号码" class="input01" maxlength="11" v-input="mobile" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+					<div class="table clean" data-events="click:clean;" data-bind="mobile">
+						<div class="tableCell">
+							<div class="icon icon-close"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span>图片验证码：</span></td>
+				<td style="position: relative;">
+					<input type="text" placeholder="请输入图片码" class="input02" maxlength="4" v-input="dtm" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+					<div class="table dtmTable">
+						<div class="tableCell">
+							<img src="/api/vf/verifyCode.jpg" class="dtm">
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><span>短信验证码：</span></td>
+				<td style="position: relative;">
+					<input type="text" placeholder="请输入短信验证码" class="input02" maxlength="4" v-input="code" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+					<input type="button" value="获取验证码" class="input03">
+					<span class="tips"><!--验证码发送成功，请注意查收短信--></span>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><button class="btn" data-events="click:next;">下一步</button></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td class="remark">如需帮助，请<a href="javascript:;" data-events="click:kf;">联系客服</a></td>
+			</tr>
+		</table>
+		<table class="tab01" style="display: none;" data-element="tab02">
+			<tr>
+				<td align="right">真实姓名：</td>
+				<td style="position: relative;">
+					<input type="text" placeholder="请输入真实姓名" class="input01" maxlength="30" v-input="username">
+					<img src="./images/icon/close.png" class="clean" data-events="click:clean;" data-bind="username">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">身份证号：</td>
+				<td style="position: relative;">
+					<input type="text" placeholder="请输入身份证号" class="input01" maxlength="18" v-input="idCard">
+					<img src="./images/icon/close.png" class="clean" data-events="click:clean;" data-bind="idCard">
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><button class="btn" data-events="click:auth;">下一步</button></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td class="remark">如需帮助，请<a href="javascript:;" data-events="click:kf;">联系客服</a></td>
+			</tr>
+		</table>
+		<table class="tab01" style="display: none;" data-element="tab03">
+			<tr>
+				<td align="right">新密码：</td>
+				<td style="position: relative;">
+					<input type="password" placeholder="请输入新密码" class="input01" maxlength="16" v-input="pawd">
+					<img src="./images/icon/close.png" class="clean" data-events="click:clean;" data-bind="pawd">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">确认密码：</td>
+				<td style="position: relative;">
+					<input type="password" placeholder="请输入确认密码" class="input01" maxlength="16" v-input="pawdCfm">
+					<img src="./images/icon/close.png" class="clean" data-events="click:clean;" data-bind="pawdCfm">
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><button class="btn" data-events="click:save;">确定</button></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td class="remark">如需帮助，请<a href="javascript:;" data-events="click:kf;">联系客服</a></td>
+			</tr>
+		</table>
+		<div class="result" style="display: none;" data-element="tab04">
+			<h4>恭喜您！修改密码成功</h4>
+			<p><strong>3</strong>秒后返回</p>
+			<a href="#home"><img src="./images/forget-back.png"></a>
+			<p>如需帮助，请<a href="javascript:;" data-events="click:kf;">联系客服</a></p>
+			<a href="#register"><img src="./images/forget-reg.jpg"></a>
+		</div>
+	</div>
+</div>

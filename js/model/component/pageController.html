@@ -1,0 +1,35 @@
+<% if(total > 0){ %>
+<% tool = $tool(); %>
+<% var now = count,max = tool.pageMax(total,each);%>
+<% var length = 10,limit = length - 1,offset = limit - 4;%>
+<table class="UI-Page">
+    <tr>
+        <td>
+            <div class="neighbor" <% if(now !== 1){ %> data-events="click:<%=event%>;" data-bind="1:<%=sort%>" <% } %>>首页</div>
+        </td>
+        <td>
+            <div class="neighbor" <% if(now > 1){ %> data-events="click:<%=event%>;" data-bind="<%=now-1%>:<%=sort%>" <% } %> >上一页</div>
+        </td>
+        <td>
+            <ul class="jump">
+                <% for(var i = (now == 1 || max < length) ? 1 : ((now == max ||max - limit < now) ? max - limit : $Math().max(now - offset,1)),len = max <= limit ? max : ( i + limit > max ? i + 1 : i + limit);i <= len;i++){ %>
+                <li <% if(i == now){ %> class="active" <% }else{ %> data-events="click:<%=event%>;" data-bind="<%=i%>:<%=sort%>" <% } %> ><%=i%></li>
+                <% } %>
+            </ul>
+        </td>
+        <td>
+            <div class="neighbor" <% if(now < max){ %> data-events="click:<%=event%>;" data-bind="<%=now+1%>:<%=sort%>" <% } %>>下一页</div>
+        </td>
+        <% if(input === true){ %>
+        <td>
+            <input type="text" class="amount" data-element="detailNode" v-input="page" v-min="1" v-max="<%=max%>">
+        </td>
+        <td><div class="redirect" <% if(now < max || now > 1){ %> data-events="click:<%=event%>;" data-bind="detailNode:<%=sort%>" <% } %>>跳转</div></td>
+        <% } %>
+        <td>
+            <div class="neighbor" <% if(now !== max){ %> data-events="click:<%=event%>;" data-bind="<%=max%>:<%=sort%>" <% } %> >最后</div>
+        </td>
+        <td><span class="statistics">共<span class="num"><%=max%></span>页</span></td>
+    </tr>
+</table>
+<% } %>

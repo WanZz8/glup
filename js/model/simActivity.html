@@ -1,0 +1,132 @@
+<div class="activity-sim">
+    <div class="content">
+        <div class="bg"></div>
+        <% if(!data.status.Status){ %>
+        <div class="apply" data-events="click:apply;">
+            <div class="light light1 odd"></div>
+            <div class="light light2 even"></div>
+            <div class="light light3 odd"></div>
+            <div class="light light4 even"></div>
+            <div class="light light5 odd"></div>
+            <div class="light light6 even"></div>
+            <div class="light light7 odd"></div>
+            <div class="light light8 even"></div>
+            <div class="light light9 odd"></div>
+            <div class="light light10 even"></div>
+            <div class="light light11 odd"></div>
+            <div class="light light12 even"></div>
+            <div class="light light13 odd"></div>
+            <div class="light light14 even"></div>
+            <div class="light light15 odd"></div>
+            <div class="light light16 even"></div>
+            <div class="light light17 odd"></div>
+            <div class="light light18 even"></div>
+            <div class="light light19 odd"></div>
+            <div class="light light20 even"></div>
+            <div class="light light21 odd"></div>
+            <div class="light light22 even"></div>
+            <div class="light light23 odd"></div>
+            <div class="light light24 even"></div>
+            <div class="light light25 odd"></div>
+            <div class="light light26 even"></div>
+            <div class="light light27 odd"></div>
+            <div class="light light28 even"></div>
+        </div>
+        <% }else{ %>
+        <div class="apply-already"></div>
+        <% }%>
+        <div class="c1">
+            <div class="title">2018年1月1日00:00-2018年3月31日23:59 共三期</div>
+            <table class="barImg">
+                <tr>
+                    <td>
+                        <img src="./images/activity/step1.jpg" alt="" style="width: 11.43em;">
+                    </td>
+                    <td>
+                        <img src="./images/activity/step2.jpg" alt="" style="width: 15.4em;">
+                    </td>
+                    <td>
+                        <img src="./images/activity/step3.jpg" alt="" style="width: 11.43em;">
+                    </td>
+                </tr>
+            </table>
+            <div class="bar"></div>
+            <table class="barTxt">
+                <tr>
+                    <td>
+                        每月第一周
+                    </td>
+                    <td>
+                        每月第二周——第三周
+                    </td>
+                    <td>
+                        每月第四周
+                    </td>
+                </tr>
+            </table>
+            <div class="title2"></div>
+            <table class="form-award">
+                <tr>
+                    <td>
+                        <div class="award">
+                            &#65509;1888
+                        </div>
+                        <span>第一名</span>
+                    </td>
+                    <td>
+                        <div class="award">
+                            &#65509;1288
+                        </div>
+                        <span>第二名</span>
+                    </td>
+                    <td>
+                        <div class="award">
+                            &#65509;888
+                        </div>
+                        <span>第三名</span>
+                    </td>
+                    <td>
+                        <div class="award">
+                            &#65509;588
+                        </div>
+                        <span>第四至第十名</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="c2">
+            <div class="title">2018年3月1日00:00-2018年3月31日23:59</div>
+            <table class="rank">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <% var list = data.rank.rankingList;%>
+                <% if(!!list){ %>
+                    <% for(var i = 0;i < list.length;i++){%>
+                    <tr>
+                        <td></td>
+                        <td><%=list[i].userName%></td>
+                        <td><%=list[i].gameAsset%></td>
+                    </tr>
+                    <% } %>
+                <% } %>
+                <% len = list && list.length || 0%>
+                <% if(len < 10){%>
+                    <% var h = 10 - len%>
+                    <% for(var i = 0;i < h;i++){ %>
+                        <tr>
+                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    <% } %>
+                <% }%>
+            </table>
+        </div>
+        <div class="c3">
+
+        </div>
+    </div>
+</div>

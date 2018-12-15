@@ -1,0 +1,26 @@
+<% if(list.length > 0){ %>
+    <% for(var i = 0,len = list.length;i < len;i++){%>
+    <% let [,t] = list[i];%>
+    <% let brief = $q().getBrief(t.contract)%>
+    <li>
+        <a href="#<%=type%>?t=<%=category%>&c=<%=t.contract%>" class="ele" data-events="click:noticeChange;" data-bind="<%=type%>">
+            <div class="name"><%=t.name%></div>
+            <div class="detail <%if(!brief || !brief.isTrading){%>rest<%}else if(brief.isUp){%>rise<%}else{%>fall<%}%>">
+                <%if(brief !== null){%>
+                    <%if(brief.isTrading){%>
+                        <span class="price"><%=brief.price.toFixed(brief.priceDigit)%></span><br>
+                        <span class="rate"><%=brief.percent%>%</span>
+                    <%}else{%>
+                        <span class="price"><%=brief.price.toFixed(brief.priceDigit)%></span><br>
+                        <span class="rate"><%=$ln('休市')%></span>
+                    <%}%>
+                <%}else{%>
+                    <span class="rt">休市</span>
+                <%}%>
+            </div>
+        </a>
+    </li>
+    <% } %>
+<% }else{ %>
+    <div>暂无商品</div>
+<% } %>

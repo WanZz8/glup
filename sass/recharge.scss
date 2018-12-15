@@ -1,0 +1,580 @@
+@import "variable";
+.page-recharge{
+    width: 100%;
+    background: $bgColor;
+    padding: rem(30px) 0;
+    .gray-words {
+        color: #a8a7a4;
+    }
+    .red-words {
+        color: #fa3448;
+    }
+    .yellow-words {
+        color: #d1a24c;
+    }
+    &-index{
+        width:rem(1200px);
+        margin:0 auto;
+        display: flex;
+        display: -webkit-flex;
+        &-left{
+            -webkit-box-flex: 0.22;
+            -webkit-flex: 0.22;
+            flex: 0.22;
+            padding-right: rem(24px);
+            .conn{
+                p{
+                  margin-bottom: rem(15px);
+                  img{
+                      width: 100%;
+                  }
+                }
+                .category{
+                    width: 100%;
+                    display: flex;
+                    display: -webkit-flex;
+                    border-radius: rem(5px);
+                    margin-bottom: rem(15px);
+                    padding: rem(25px) rem(20px);
+                    cursor: pointer;
+                    a{
+                        color: #fff;
+                    }
+                    h1{
+                        margin-left: rem(10px);
+                    }
+                }
+                .simulate{
+                    background-color: #40506b;
+                }
+                .real{
+                    background-color: #cc9c46;
+                }
+            }
+        }
+        &-right{
+            -webkit-box-flex: 0.78;
+            -webkit-flex: 0.78;
+            flex: 0.78;
+            min-height: rem(500px);
+            .market{
+                border-radius: rem(5px) rem(5px) 0px 0px;
+                width: 100%;
+                height: rem(45px);
+                margin: 0 auto;
+                background: #f7f7f7;
+                color: #333333;
+                border-bottom: none;
+                .tab-nav{
+                    list-style: none;
+                    margin: 0px;
+                    padding: 0px;
+                    li {
+                        border: none;
+                        float: left;
+                        font-size: rem(16px);
+                        line-height: rem(44px);
+                        height: rem(44px);
+                        padding: 0px rem(20px);
+                        color: #666666;
+                        position: relative;
+                        cursor: pointer;
+                        a:after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: rem(5px) rem(15px) 0px 0px;
+                            border-right: 1px solid #e6e6e6;
+                            border-bottom: 0;
+                            box-sizing: border-box;
+                        }
+                    }
+                    .active {
+                        background: #fff;
+                        height: rem(44px);
+                        line-height: rem(44px);
+                        font-weight: bold;
+                        a{
+                           color: #d1a24c; 
+                        }
+                    }
+                    .active:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: rem(0px) rem(15px) 0px 0px;
+                        border-top: rem(2px) solid #d1a24c !important;
+                        //border-left: 1px solid #e6e6e6;
+                        border-right: 2px solid #d1a24c !important;
+                        border-bottom: 0;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    &-bank{
+        background-color: #fff;
+        border-bottom-left-radius: rem(5px);
+        border-bottom-right-radius: rem(5px);
+        border-top: 0;
+        min-height: rem(450px);
+        padding-top: rem(10px);
+        .remark{
+            background: #fffad8;
+            color: #cfa65c;
+            border-top: 1px solid #fbefba;
+            border-bottom: 1px solid #fbefba;
+            line-height: rem(28px);
+            line-height: rem(28px);
+            font-size: rem(14px);
+            width: 100%;
+            text-indent: rem(20px);
+        }
+        .holdings-subsidiary{
+            margin-bottom: rem(30px);
+            .bank-list-wrap {
+                width: 100%;
+                overflow: hidden;
+                clear: both;
+                padding-top: rem(30px);
+                .select-bang-left {
+                    width: 15%;
+                    float: left;
+                    margin-top: rem(10px);
+                    text-align: right;
+                    span {
+                        padding-right: rem(10px);
+                        color: #666666;
+                        display: inline-block;
+                    }
+                }
+                .select-bang-right, .select-bank-card {
+                    width: 85%;
+                    float: left;
+                    .chat-txt {
+                        list-style: none;
+                        display: block;
+                        height: 100%;
+                        overflow: auto;
+                        font-size: rem(14px);
+                        .bank-icon {
+                            width: rem(142px);
+                            height: rem(48px);
+                            line-height: rem(48px);
+                            float: left;
+                            text-align: center;
+                            margin: 0 rem(13px) rem(20px) 0;
+                            position: relative;
+                            cursor: pointer;
+                            .bank-recommend {
+                                display: block;
+                                background: #cfa65c;
+                                position: absolute;
+                                font-size: rem(12px);
+                                color: #fff;
+                                float: left;
+                                top: 0;
+                                right: 0;
+                                line-height: rem(20px);
+                                padding: 0 rem(6px);
+                                border-radius: 0px rem(5px);
+                            }
+                        }
+                        .bank-icon:before {
+                            content: "";
+                            top: 0px;
+                            left: 0px;
+                            position: absolute;
+                            border-radius: rem(4px);
+                            border: 1px solid #cccccc;
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                        }
+                        .active:before {
+                            box-shadow: 0 0 3px #cdcccc;
+                            border: 1px solid #d1a24c;
+                        }
+                    }
+                }
+                    
+            }
+            .under-distance {
+                padding-bottom: rem(30px);
+                overflow: hidden;
+                .alipay-account {
+                    margin-top: rem(40px);
+                    width: 15%;
+                }
+                .select-bang-left {
+                    width: 15%;
+                    float: left;
+                    margin-top: rem(10px);
+                    text-align: right;
+                    span {
+                        padding-right: rem(10px);
+                        line-height: rem(80px);
+                        color: #666666;
+                        display: inline-block;
+                    }
+                }
+                .pay-money {
+                    width: 85%;
+                    float: left;
+                    margin-top: rem(30px);
+                    position: relative;
+                    .pay-symbol {
+                        position: absolute;
+                        font-style: normal;
+                        font-size: rem(18px);
+                        line-height: rem(42px);
+                        left: rem(10px);
+                    }
+                    .pay-money-input {
+                        width: rem(218px);
+                        height: rem(38px);
+                        line-height: rem(38px);
+                        padding: 0 rem(10px) 0 rem(30px);
+                        border: 1px solid #cccccc;
+                        border-radius: rem(5px);
+                        font-size: rem(14px);
+                    }
+                    .pay-money-input:focus{
+                        border: 1px solid $focusColor;
+                        outline: none;
+                    }
+                    .center-notice-pic {
+                        margin-left: rem(10px);
+                    }
+                    .top-up-credit-limit {
+                        position: absolute;
+                        margin: rem(10px) 0 0 rem(16px);
+                    }
+                }
+            }
+            .alipay-next-step{
+                margin-top: rem(20px);
+                padding-left: rem(120px);
+                .real-name {
+                    width: rem(122px);
+                    line-height: rem(38px);
+                    border: 1px solid #e7eaec;
+                    border-radius: rem(5px);
+                    margin-left: rem(20px);
+                    margin-top: rem(20px);
+                    font-size: rem(16px);
+                    cursor: pointer;
+                    background: #f9f9f9;
+                    color: #666666;
+                }
+                .yellow-bg {
+                    background: #d1a24c;
+                    color: #fff;
+                }
+                .remark01{
+                    margin: rem(20px) 0px 0px rem(22px);
+                    padding-bottom: rem(15px);
+                    font-size: rem(14px);
+                    color: #a8a7a4;
+                    h5{
+                        padding: rem(8px) 0;
+                    }
+                    p{
+                        padding: rem(5px) 0;
+                    }
+                }
+            }
+        }
+        .bank-form{
+            padding-left: rem(20px);
+            table{
+                margin-top: rem(10px);
+                color: #666666;
+                td{
+                    padding: rem(10px) 0;
+                }
+                .tdleft{
+                    text-align: right;
+                    padding-right: rem(15px);
+                }
+                .account{
+                    width: rem(238px);
+                    height: rem(44px);
+                    line-height: rem(44px);
+                    padding: 0 rem(10px);
+                    border-radius: rem(5px);
+                    border: 1px solid #e6e6e6;
+                    font-size: rem(14px);
+                }
+                .amount{
+                    position: relative;
+                }
+                .amount:before{
+                    position: absolute;
+                    content: "￥";
+                    font-size: rem(18px);
+                    line-height: rem(42px);
+                    left: rem(8px);
+                }
+                .money{
+                    width: rem(238px);
+                    height: rem(38px);
+                    line-height: rem(38px);
+                    padding: 0 rem(10px) 0 rem(30px);
+                    border: 1px solid #e6e6e6;
+                    border-radius: rem(5px);
+                    font-size: rem(14px);
+                }
+                input:focus{
+                    outline: none;
+                    border: 1px solid $focusColor;
+                }
+            }
+            .btn{
+                width: rem(122px);
+                line-height: rem(38px);
+                border: 1px solid #e7eaec;
+                border-radius: rem(5px);
+                margin-top: rem(10px);
+                font-size: rem(16px);
+                cursor: pointer;
+                background: #d1a24c;
+                color: #fff;
+            }
+            .bz{
+                padding-left: rem(125px);
+                padding-bottom: rem(20px);
+                font-size: rem(14px);
+                color: #a8a7a4;
+                h5{
+                    padding: rem(8px) 0;
+                }
+                p{
+                    padding: rem(5px) 0;
+                }
+            }
+        }
+    }
+    &-zfb{
+        background-color: #fff;
+        border-bottom-left-radius: rem(5px);
+        border-bottom-right-radius: rem(5px);
+        min-height: rem(450px);
+        padding: rem(40px) rem(30px);
+        .collection{
+            line-height: rem(30px);
+            color: #666666;
+            padding-bottom: rem(20px);
+            border-bottom: 1px solid #e6e6e6;
+        }
+        table{
+            margin-top: rem(10px);
+            color: #666666;
+            td{
+                padding: rem(18px) 0;
+            }
+            .tdleft{
+                text-align: right;
+                padding-right: rem(15px);
+            }
+            .account{
+                width: rem(238px);
+                height: rem(44px);
+                line-height: rem(44px);
+                padding: 0 rem(10px);
+                border-radius: rem(5px);
+                border: 1px solid #e6e6e6;
+                font-size: rem(14px);
+            }
+            .amount{
+                position: relative;
+            }
+            .amount:before{
+                position: absolute;
+                content: "￥";
+                font-size: rem(18px);
+                line-height: rem(42px);
+                left: rem(8px);
+            }
+            .money{
+                width: rem(218px);
+                height: rem(38px);
+                line-height: rem(38px);
+                padding: 0 rem(10px) 0 rem(30px);
+                border: 1px solid #e6e6e6;
+                border-radius: rem(5px);
+                font-size: rem(14px);
+            }
+            input:focus{
+                outline: none;
+                border: 1px solid $focusColor;
+            }
+        }
+        .btn{
+            width: rem(122px);
+            line-height: rem(38px);
+            border: 1px solid #e7eaec;
+            border-radius: rem(5px);
+            margin-top: rem(10px);
+            font-size: rem(16px);
+            cursor: pointer;
+            background: #d1a24c;
+            color: #fff;
+        }
+        .remark{
+            font-size: rem(14px);
+            color: #a8a7a4;
+            h5{
+                padding: rem(8px) 0;
+            }
+            p{
+                padding: rem(5px) 0;
+            }
+        }
+        
+    }
+    &-common{
+        background-color: #fff;
+        border-bottom-left-radius: rem(5px);
+        border-bottom-right-radius: rem(5px);
+        min-height: rem(450px);
+        padding: rem(40px) rem(30px);
+        ul{
+            list-style: none;
+            padding-top: 10px;
+            li{
+                display: flex;
+                display: -webkit-flex;
+                padding: 10px 0;
+                .label{
+                    min-width: 100px;
+                    line-height: 44px;
+                    text-align: right;
+                    margin-right: 15px;
+                }
+                input{
+                    width: rem(238px);
+                    height: rem(44px);
+                    line-height: rem(44px);
+                    padding: 0 rem(10px);
+                    border-radius: rem(5px);
+                    border: 1px solid #e6e6e6;
+                    font-size: rem(14px);
+                }
+                input:focus{
+                    outline: none;
+                    border: 1px solid #cc9c46;
+                }
+                select{
+                    width: rem(238px);
+                    height: rem(44px);
+                    line-height: rem(44px);
+                    padding: 0 rem(10px);
+                    border-radius: rem(5px);
+                    border: 1px solid #e6e6e6;
+                    font-size: rem(14px);
+                }
+                select:focus{
+                    outline: none;
+                    border: 1px solid #cc9c46;
+                }
+            }
+        }
+        .opt{
+            padding: 15px 0 10px 115px;
+            .next{
+                width: rem(122px);
+                line-height: rem(38px);
+                border: 1px solid #e7eaec;
+                border-radius: rem(5px);
+                margin-top: rem(10px);
+                font-size: rem(16px);
+                cursor: pointer;
+                background: #d1a24c;
+                color: #fff;
+            }
+        }
+        .attention{
+            padding: 5px 0 15px 0;
+            text-align: center;
+            line-height: 22px;
+            h4{
+                color: #636366;
+            }
+            p{
+                color: #ff7300;
+                font-size: 13px;
+            }
+        }
+        .item{
+            display: flex;
+            display: -webkit-flex;
+            padding: 14px 0;
+            border-bottom: 1px solid #e6e6e6;
+            &-left{
+                min-width: 150px;
+                text-align: right;
+                .importance{
+                    font-size: 11px;
+                    color: #d4000f;
+                }
+            }
+            &-right{
+                margin-left: 15px;
+                color: #9c9b9b;
+                a{
+                    margin-left: 15px;
+                    color: #103774;
+                    padding: 2px 4px;
+                    background-color: #e6e6e6;
+                }
+            }
+        }
+        &.PACode{
+            .title{
+                text-align: center;
+                color: #999999;
+                font-size:rem(14px);
+                height:rem(36px);
+                line-height:rem(36px);
+                cursor: default;
+            }
+            .img{
+                text-align: center;
+            }
+        }
+    }
+    &-remark{
+        padding: 10px 0 15px 115px;
+        color: #9c9b9b;
+        &.PACode{
+            padding-left: 0;
+            width:rem(400px);
+            margin: 0 auto;
+            font-size:rem(12px);
+        }
+        h5{
+            padding: 6px 0;
+            font-size: 14px;
+        }
+        p{
+            padding: 5px 0;
+            font-size: 14px;
+            a{
+                color: #caa35a;
+            }
+            span{
+                &.red{
+                    color: red;
+                }
+            }
+        }
+    }
+}

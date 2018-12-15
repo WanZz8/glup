@@ -1,0 +1,105 @@
+<div class="orderInfo" data-element="mainNode">
+    <div class="mask" data-events="click:close;"></div>
+    <div class="content">
+        <div class="body">
+            <div class="main">
+                <div class="head">
+                    订单详情
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-close" data-events="click:close;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="list-left">交易ID:</div>
+                                <div class="list-right"><%=data.reference.id%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">商品:</div>
+                                <div class="list-right"><%=data.reference.commodity%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">商品代码:</div>
+                                <div class="list-right"><%=data.reference.contract%></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-left">交易类型:</div>
+                                <div class="list-right"></div>
+                            </td>
+                            <td>
+                                <div class="list-left">模式:</div>
+                                <div class="list-right"><%=data.reference.moneyType === 0?'元':'角'%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">交易状态:</div>
+                                <div class="list-right"><%= data.reference.tradeStatus === 13?'等待结算':data.reference.tradeStatus === 14?'结算成功':'状态错误'%></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-left">买卖方向:</div>
+                                <div class="list-right"><%= data.reference.isBuy===true?'买涨':'买跌'%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">交易综合费:</div>
+                                <div class="list-right"></div>
+                            </td>
+                            <td>
+                                <div class="list-left">盈亏:</div>
+                                <div class="list-right"><%= data.reference.income%></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-left">开仓价:</div>
+                                <div class="list-right"><%= data.reference.opPrice%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">平仓价位:</div>
+                                <div class="list-right"><%= data.reference.cpPrice%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">保证金:</div>
+                                <div class="list-right"><%= $Math().abs(data.reference.stopLossBegin)%></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-left">止盈金额:</div>
+                                <div class="list-right"><%= data.reference.stopProfit%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">止损金额:</div>
+                                <div class="list-right"><%= $Math().abs(data.reference.stopLoss)%></div>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-left">开仓时间:</div>
+                                <div class="list-right"><%= $tool().formatDate(data.reference.time.time,'y/m/d h:i:s')%></div>
+                            </td>
+                            <td>
+                                <div class="list-left">平仓时间:</div>
+                                <div class="list-right"><%= $tool().formatDate(data.reference.tradeTime.time,'y/m/d h:i:s')%></div>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="foot">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

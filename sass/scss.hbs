@@ -1,0 +1,26 @@
+{{#each layouts}}
+    {{#each sprites}}
+        @import 'variable';
+        @media screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 300dpi) {
+        .{{../classname}}{
+        font-size:2rem;
+        background-image: url('{{escimage url}}');
+        background-size: join(unit({{width}}/$baseSize*2,em),unit({{height}}/$baseSize*2,em));
+        }
+        }
+        .{{../classname}} {
+        font-size:1rem;
+        background-image: url('{{escimage url}}');
+        background-size: join(unit({{width}}/$baseSize,em),unit({{height}}/$baseSize,em));
+        }
+    {{/each}}
+
+    {{#each layout.items}}
+        .{{../classname}}-{{meta.name}} {
+        background-position: join( -(unit({{x}}/$baseSize,em)),-(unit({{y}}/$baseSize,em)));
+        width: unit({{width}}/$baseSize,em);
+        height: unit({{height}}/$baseSize,em);
+        }
+    {{/each}}
+{{/each}}

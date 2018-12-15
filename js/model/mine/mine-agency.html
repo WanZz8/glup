@@ -1,0 +1,31 @@
+<div class="page-setting">
+	
+	<!--<div class="page-setting-head">-->
+		<!--<div class="lev">-->
+			<!--<img src="./images/level/lev5.png">-->
+			<!--<span v-param="lev"></span>-->
+		<!--</div>-->
+		<!--<div class="income">-->
+			<!--佣金收入：<span class="val" v-param="income">￥0.00</span>-->
+		<!--</div>-->
+		<!--<div class="proportion">-->
+			<!--佣金比例：<span class="val rate" v-param="proportion">0%</span>-->
+		<!--</div>-->
+		<!--<div class="users">-->
+			<!--下级用户数：<span class="val" v-param="users">0</span>-->
+		<!--</div>-->
+		<!--<div class="period">-->
+			<!--下级有效期：<span class="val" v-param="period">0年</span>-->
+		<!--</div>-->
+	<!--</div>-->
+	
+	<div class="page-setting-tab">
+		<ul>
+			<li class="active" data-src="#mine-agency-user"><%=$ln('我的用户')%></li>
+			<li data-src="#mine-agency-subdeal"><%=$ln('下级交易')%></li>
+			<li data-src="#mine-agency-team"><%=$ln('团队盈亏')%></li>
+		</ul>
+	</div>
+	<div class="main" id="agency"></div>
+	
+</div>

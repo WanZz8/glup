@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=1920, initial-scale=0.1">
+    <title>代理中心</title>
+    <link rel="stylesheet" href="css/combo.css?v=b4959e60ce">
+    <link rel="shortcut icon" type="ico" href="images/favicon.ico"/>
+    <!--<script type="text/javascript">-->
+        <!--var browser = {-->
+            <!--versions: function() {-->
+                <!--var u = navigator.userAgent, app = navigator.appVersion;-->
+                <!--return {     //移动终端浏览器版本信息-->
+                    <!--trident: u.indexOf('Trident') > -1, //IE内核-->
+                    <!--presto: u.indexOf('Presto') > -1, //opera内核-->
+                    <!--webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核-->
+                    <!--gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核-->
+                    <!--mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端-->
+                    <!--ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端-->
+                    <!--android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器-->
+                    <!--iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器-->
+                    <!--iPad: u.indexOf('iPad') > -1, //是否iPad-->
+                    <!--webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部-->
+                <!--};-->
+            <!--} (),-->
+            <!--language: (navigator.browserLanguage || navigator.language).toLowerCase()-->
+        <!--};-->
+        <!--if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面-->
+            <!--/* var ua = navigator.userAgent.toLowerCase();//获取判断用的对象-->
+            <!--if (ua.match(/MicroMessenger/i) == "micromessenger") {-->
+            <!--//在微信中打开-->
+            <!--setInterval(WeixinJSBridge.call('closeWindow'),2000);-->
+            <!--}-->
+            <!--if (ua.match(/WeiBo/i) == "weibo") {-->
+            <!--//在新浪微博客户端打开-->
+            <!--}-->
+            <!--if (ua.match(/QQ/i) == "qq") {-->
+            <!--//在QQ空间打开-->
+            <!--}-->
+            <!--if (browser.versions.ios) {-->
+            <!--//是否在IOS浏览器打开-->
+            <!--}-->
+            <!--if(browser.versions.android){-->
+            <!--//是否在安卓浏览器打开-->
+            <!--}*/-->
+            <!--window.location.href = "https://fk.76bao.hk";-->
+        <!--}-->
+    <!--</script>-->
+</head>
+<body>
+<script>requirejs={waitSeconds: 0}</script>
+<script src="require.js" defer async="true" data-main="main.js?v=19a55b3816"></script>
+<div id="loading">
+    <div id="load-init"></div>
+    <div id="load-access">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <style type="text/css">
+        .lds-roller {
+            display: inline-block;
+            position: relative;
+            width: 64px;
+            height: 64px;
+        }
+        .lds-roller div {
+            animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            transform-origin: 32px 32px;
+        }
+        .lds-roller div:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #fff;
+            margin: -3px 0 0 -3px;
+        }
+        .lds-roller div:nth-child(1) {
+            animation-delay: -0.036s;
+        }
+        .lds-roller div:nth-child(1):after {
+            top: 50px;
+            left: 50px;
+        }
+        .lds-roller div:nth-child(2) {
+            animation-delay: -0.072s;
+        }
+        .lds-roller div:nth-child(2):after {
+            top: 54px;
+            left: 45px;
+        }
+        .lds-roller div:nth-child(3) {
+            animation-delay: -0.108s;
+        }
+        .lds-roller div:nth-child(3):after {
+            top: 57px;
+            left: 39px;
+        }
+        .lds-roller div:nth-child(4) {
+            animation-delay: -0.144s;
+        }
+        .lds-roller div:nth-child(4):after {
+            top: 58px;
+            left: 32px;
+        }
+        .lds-roller div:nth-child(5) {
+            animation-delay: -0.18s;
+        }
+        .lds-roller div:nth-child(5):after {
+            top: 57px;
+            left: 25px;
+        }
+        .lds-roller div:nth-child(6) {
+            animation-delay: -0.216s;
+        }
+        .lds-roller div:nth-child(6):after {
+            top: 54px;
+            left: 19px;
+        }
+        .lds-roller div:nth-child(7) {
+            animation-delay: -0.252s;
+        }
+        .lds-roller div:nth-child(7):after {
+            top: 50px;
+            left: 14px;
+        }
+        .lds-roller div:nth-child(8) {
+            animation-delay: -0.288s;
+        }
+        .lds-roller div:nth-child(8):after {
+            top: 45px;
+            left: 10px;
+        }
+        @keyframes lds-roller {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div id="load-buffer"></div>
+</div>
+<div id="head"></div>
+<div id="right"></div>
+<div id="main"></div>
+<div id="foot"></div>
+<div id="popUp"></div>
+</body>
+</html>

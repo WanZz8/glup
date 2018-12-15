@@ -1,0 +1,26 @@
+<table>
+	<tr>
+		<th>用户名</th>
+		<th>今日手数</th>
+		<th>历史手数</th>
+		<th>注册时间</th>
+		<th>最后登录时间</th>
+	</tr>
+	<% if(list.length==0){%>
+		<tr>
+			<td colspan="5">暂无用户数据</td>
+		</tr>
+	<% } %>
+	<% for(var i=0,len=list.length;i < len;i++){%>
+	<% var item = list[i];%>
+	<% var registerTime = $tool().formatDate(item.registerTime, "y-m-d h:i:s");%>
+	<% var loginTime = $tool().formatDate(item.loginTime, "y-m-d h:i:s");%>
+	<tr>
+		<td><%=item.username%></td>
+		<td><%=item.dayTradeVolume%></td>
+		<td><%=item.tradeVolume%></td>
+		<td><%=registerTime%></td>
+		<td><%=loginTime%></td>
+	</tr>
+	<% } %>
+</table>

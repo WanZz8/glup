@@ -1,0 +1,174 @@
+@import "variable";
+.page-notice{
+    width: 100%;
+    background: $bgColor;
+    padding-bottom: rem(30px);
+    &-body{
+        width:rem(1200px);
+        margin:0 auto;
+        display: flex;
+        display: -webkit-flex;
+        &-left{
+            -webkit-box-flex: 0.22;
+            -webkit-flex: 0.22;
+            flex: 0.22;
+            padding-right: rem(24px);
+            .conn{
+                width: 100%;
+                .title{
+                    position: relative;
+                    background-color: #f7f7f7;
+                    padding: rem(10px) 0;
+                    padding-left: rem(20px);
+                    font-weight: 600;
+                    border-top-left-radius: rem(5px);
+                    border-top-right-radius: rem(5px);
+                    border-bottom: 1px solid #e6e6e6;
+                }
+                .title:before{
+                    content: "";
+                    width: rem(3px);
+                    background: #353f59;
+                    height: rem(15px);
+                    border-radius: rem(3px);
+                    left: rem(10px);
+                    top: rem(9px);
+                    position: absolute;
+                }
+                .rank{
+                    padding: rem(12px) rem(10px);
+                    background-color: #fff;
+                    border-bottom-left-radius: rem(5px);
+                    border-bottom-right-radius: rem(5px);
+                    font-size: rem(14px);
+                    li{
+                        padding: rem(10px) 0;
+                        a{
+                            color: #a8a7a4;
+                            padding-bottom: rem(5px);
+                            padding-right: rem(3px);
+                            border-bottom: 1px solid #f1f1f1;
+                        }
+                    }
+                }
+            }
+        }
+        &-right{
+            -webkit-box-flex: 0.78;
+            -webkit-flex: 0.78;
+            flex: 0.78;
+            min-height: rem(500px);
+        }
+    }
+    &-list{
+        .title{
+            position: relative;
+            background-color: #f7f7f7;
+            padding: rem(10px) 0;
+            padding-left: rem(20px);
+            font-weight: 600;
+            border-top-left-radius: rem(5px);
+            border-top-right-radius: rem(5px);
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .title:before{
+            content: "";
+            width: rem(3px);
+            background: #353f59;
+            height: rem(15px);
+            border-radius: rem(3px);
+            left: rem(10px);
+            top: rem(9px);
+            position: absolute;
+        }
+        .conn{
+            background-color: #fff;
+            padding-left: rem(15px);
+            padding-bottom: rem(10px);
+            .item{
+                width: 100%;
+                display: flex;
+                display: -webkit-flex;
+                padding: rem(15px) 0;
+                border-bottom: 1px solid #e6e6e6;
+                cursor: pointer;
+                .date{
+                    -webkit-box-flex: 0.12;
+                    -webkit-flex: 0.12;
+                    flex: 0.12;
+                    text-align: center;
+                    padding-top: rem(17px);
+                    h5{
+                        font-size: rem(24px);
+                        line-height: rem(40px);
+                        color: #999999;
+                    }
+                }
+                .content{
+                    -webkit-box-flex: 0.78;
+                    -webkit-flex: 0.78;
+                    flex: 0.78;
+                    padding: rem(5px) rem(25px) 0 rem(8px);
+                    h5{
+                        font-size: rem(20px);
+                        color: #333333;
+                        line-height: rem(36px);
+                    }
+                    p{
+                        line-height: rem(28px);
+                        color: #a8a7a4;
+                    }
+                    img{
+                        float: right;
+                        margin-right: rem(10px);
+                    }
+                }
+            }
+            .item:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+    &-detail{
+        background-color: #fff;
+        min-height: rem(700px);
+        .title{
+            padding: rem(30px) rem(20px) 0 rem(20px);
+            border-bottom: 1px dashed #e6e6e6;
+            h5{
+                font-size: rem(28px);
+            }
+            p{
+                padding: rem(25px) 0;
+                color: #a8a7a4;
+                font-size: rem(16px);
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                .icon{
+                    padding-left: rem(20px);
+                    display: block;
+                }
+            }
+            .p:before{
+                position: absolute;
+                content: url('../images/icon/clock.png');
+                display: block;
+            }
+        }
+        .conn{
+            padding: rem(20px);
+            color: #333333;
+            text-align: justify;
+            font-size: rem(15px);
+            line-height: rem(29px);
+        }
+    }
+}

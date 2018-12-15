@@ -1,0 +1,287 @@
+@import "variable";
+.page-news{
+    width: 100%;
+    background: $bgColor;
+    padding-bottom: rem(30px);
+    .banner-img{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .market{
+        background: #f1f1f1;
+        padding-top: rem(15px);
+        width: 100%;
+        float: left;
+        &-center{
+            width:rem(1200px);
+            margin:0 auto;
+            &-left{
+                float: left;
+                min-height: rem(300x);
+                min-width: rem(600x);
+            }
+            &-right{
+                float: left;
+                margin-left:rem(12px);
+                .title{
+                    padding-left: rem(15px);
+                    border-radius: rem(5px) rem(5px) 0px 0px;
+                    width: rem(450px);
+                    height: rem(45px);
+                    background: #f7f7f7;
+                    color: #333333;
+                    border-bottom: 1px solid #e6e6e6;
+                    font-size: rem(16px);
+                    line-height: rem(44px);
+                }
+                .main {
+                    height: rem(990px);
+                    overflow-y: scroll;
+                    background: #fff;
+                    border-left: 1px solid #f1f1f1;
+                    border-radius: 0px 0px rem(5px) rem(5px);
+                    padding: rem(10px);
+                    width: rem(450px);
+                    float: left;
+                    position: relative;
+                    .under-left{
+                        float: left;
+                        background: url(../images/yuan.png) right no-repeat;
+                        width: rem(52px);
+                        height: rem(46px);
+                    }
+                    .under-left-small {
+                        width: rem(35px);
+                        margin-left: rem(12px);
+                        margin-top: rem(8px);
+                        font-size: rem(12px);
+                        p{
+                            font-size: rem(16px);
+                            font-weight: bold;
+                            padding-left: 3px;
+                        }
+                    }
+                    .left{
+                        padding-top: 16px;
+                    }
+                    .under-times-light {
+                        color: #bfbfbf;
+                        margin-left: rem(8px);
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                    }
+                    .redline-num {
+                        color: #e34c4c;
+                        margin-right: rem(8px);
+                    }
+                    .msg-europol {
+                        padding-top: rem(5px);
+                    }
+                    .under-dark{
+                        font-size: rem(12px);
+                        overflow: hidden;
+                        width: rem(376px);
+                        color: #868585;
+                        padding-left: rem(37px);
+                        background: url(../images/line.png) left repeat-y;
+                        margin-left: rem(23px);
+                        padding-bottom: rem(10px);
+                        line-height: rem(22px);
+                    }
+                    .under-times {
+                        float: left;
+                        background: url(../images/qian.png) rem(21px) 0px no-repeat;
+                        width: rem(51px);
+                        height: rem(16px);
+                    }
+                    .under-light{
+                        color: #bfbfbf;
+                        font-size: rem(14px);
+                        height: rem(46px);
+                        line-height: rem(42px);
+                        margin-left: rem(10px);
+                    }
+                    .icon{
+                        display: block;
+                        margin-right: rem(5px);
+                    }
+                    .zbtable{
+                        width: 100%;
+                        position: relative;
+                        line-height: rem(26px);
+                        .country{
+                            width: 40px;
+                        }
+                        .ensign{
+                            width: rem(25px);
+                            position: absolute;
+                            right: rem(10px);
+                            top: rem(16px);
+                        }
+                        .tag{
+                            text-align: center;
+                        }
+                        .style-tag{
+                            font-size: rem(11px);
+                            padding: rem(1px) rem(6px);
+                            border-radius: rem(5px);
+                        }
+                        .style-green{
+                            border: 1px solid #24b166;
+                            color: #24b166;
+                        }
+                        .style-red{
+                            border: 1px solid #cc393e;
+                            color: #cc393e;
+                        }
+                        .style-yellow{
+                            border: 1px solid #fda838;
+                            color: #fda838;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-list{
+        .nav{
+            border-radius: rem(5px) rem(5px) 0px 0px;
+            height: rem(45px);
+            margin: 0 auto;
+            background: #f7f7f7;
+            color: #333333;
+            border-bottom: 1px solid #e6e6e6;
+            .tab-nav {
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                li {
+                    border: none;
+                    float: left;
+                    cursor: pointer;
+                    font-size: rem(16px);
+                    line-height: rem(44px);
+                    height: rem(44px);
+                    padding: 0px rem(20px);
+                    position: relative;
+                }
+                .active {
+                    background: #fff;
+                    height: rem(46px);
+                    line-height: rem(44px);
+                    font-weight: bold;
+                    color: #333333;
+                }
+                .active:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: rem(5px) rem(5px) 0px 0px;
+                    border-top: rem(4px) solid #d1a24c;
+                    border-left: 1px solid #e6e6e6;
+                    border-right: 1px solid #e6e6e6;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .content {
+            margin: 0 auto;
+            background: #fff;
+            color: #333;
+            border-radius: 0px 0px rem(5px) rem(5px);
+            &-body{
+                margin-bottom: rem(30px);
+                width: 100%;
+                background: #fff;
+                border-radius: 0px 0px rem(5px) rem(5px);
+                float: left;
+                color: #adadad;
+                font-size: rem(14px);
+                &-main{
+                    padding: rem(15px) 0;
+                    overflow: hidden;
+                    border-bottom: 1px solid #e6e6e6;
+                    cursor: pointer;
+                    .main-left{
+                        float: left;
+                        margin-left: rem(15px);
+                        border-radius: rem(5px);
+                        img {
+                            width: rem(100px);
+                            height: rem(66px);
+                        }
+                    }
+                    .main-right{
+                        float: left;
+                        width: rem(600px);
+                        margin-left: rem(15px);
+                        padding: 8px 10px 0 0;
+                        .title{
+                            font-size: rem(16px);
+                            line-height: rem(24px);
+                            color: #333333;
+                        }
+                        .gray-words {
+                            color: #a8a7a4;
+                        }
+                        .leave-top{
+                            margin-top: 15px !important;
+                            display: -webkit-box;
+                            display: -moz-box;
+                            display: -ms-flexbox;
+                            display: -webkit-flex;
+                            display: flex;
+                        }
+                        .redline-num{
+                            color: #e34c4c;
+                            margin-right: rem(10px);
+                        }
+                        .icon{
+                            display: block;
+                            margin-right: rem(5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-detail{
+        width:rem(1200px);
+        margin:0 auto;
+        background-color: #fff;
+        min-height: rem(500px);
+        .title{
+            padding: rem(50px) rem(20px) 0 rem(20px);
+            border-bottom: 1px dashed #e6e6e6;
+            h5{
+                font-size: rem(28px);
+            }
+            p{
+                padding: rem(25px) 0px rem(15px) 0;
+                color: #a8a7a4;
+                font-size: rem(16px);
+                position: relative;
+            }
+            p:before{
+                position: absolute;
+                content: url('../images/clock.png');
+                display: block;
+            }
+        }
+        .conn{
+            padding: rem(20px);
+            color: #333333;
+            text-align: justify;
+            font-size: rem(14px);
+            line-height: rem(29px);
+            min-height: 550px;
+        }
+    }
+}

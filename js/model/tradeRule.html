@@ -1,0 +1,86 @@
+<div class="tradeRule" data-element="mainNode">
+    <div class="mask" data-events="click:close;"></div>
+    <div class="content">
+        <div class="body">
+            <div class="main">
+                <div class="head">
+                    交易规则
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-close" data-events="click:close;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <ul class="list-table">
+                        <li>
+                            <div class="list-table-left light-blue">交易品种</div>
+                            <div class="list-table-right"><%= rules.name %></div>
+                        </li>
+                        <li>
+                            <div class="list-table-left">货币单位</div>
+                            <div class="list-table-right"><%= rules.currency %></div>
+                        </li>
+                        <li>
+                            <div class="list-table-left light-blue">交易单位</div>
+                            <div class="list-table-right"><%= rules.unit %></div>
+                        </li>
+                        <li>
+                            <div class="list-table-left">最小波动</div>
+                            <div class="list-table-right"><%= rules.volatility %></div>
+                        </li>
+                        <li>
+                            <div class="list-table-left light-blue">波动盈亏</div>
+                            <div class="list-table-right"><%= rules.volatilityIncome %></div>
+                        </li>
+                        <li>
+                            <div class="list-table-left tradeTime">交易时间</div>
+                            <div class="list-table-right tradeTime">
+                                <div class="parallel">
+                                    <p class="sub">【买入时间】 </p>
+                                    <% if(rules.buyTimeAM){ %>
+                                    <p><%=# rules.buyTimeAM %></p>
+                                    <% } %>
+                                    <% if(rules.buyTimePM){ %>
+                                    <p><%=# rules.buyTimePM %></p>
+                                    <% } %>
+                                    <% if(rules.buyTimeNI){ %>
+                                    <p><%=# rules.buyTimeNI %></p>
+                                    <% } %>
+                                </div>
+                                <div class="parallel">
+                                    <p class="sub">【卖出时间】</p>
+                                    <% if(rules.sellTimeAM){ %>
+                                    <p><%=# rules.sellTimeAM %></p>
+                                    <% } %>
+                                    <% if(rules.sellTimePM){ %>
+                                    <p><%=# rules.sellTimePM %></p>
+                                    <% } %>
+                                    <% if(rules.sellTimeNI){ %>
+                                    <p><%=# rules.sellTimeNI %></p>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-table-left light-blue">清仓时间</div>
+                            <div class="list-table-right"><%= rules.clearTime %></div>
+                        </li>
+                        <li>
+                            <div class="list-table-left">交易综合费</div>
+                            <div class="list-table-right"><%= rules.chargeUnit %></div>
+                        </li>
+                        <% if(rules.rate){ %>
+                        <li>
+                            <div class="list-table-left light-blue">汇率</div>
+                            <div class="list-table-right"><%= rules.rate %></div>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="foot">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

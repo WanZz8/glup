@@ -1,0 +1,68 @@
+@import "variable";
+
+.page-foot{
+  width: 100%;
+  .wrap{
+    width: 100%;
+    background: url('../images/foot-Bg.jpg') no-repeat center;
+    height:rem(280px);
+    text-align: center;
+    a{
+      cursor: pointer;
+    }
+    .title{
+      height:rem(50px);
+      line-height:rem(50px);
+      font-size:rem(18px);
+      color: $uiColor;
+      cursor: default;
+    }
+    .link{
+      height:rem(46px);
+      display: inline-block;
+      border: 1px solid $uiColor;
+      margin: 0 auto;
+      padding:0 rem(45px);
+      border-radius: rem(5px);
+      span{
+        line-height: rem(43px);
+        margin: 0 rem(8px);
+        color: $uiColor;
+        font-size:rem(14px);
+      }
+    }
+    .policy{
+      margin-top: rem(43px);
+      font-size:rem(14px);
+      >a{
+        color: $uiColor;
+      }
+      .about-us{
+        padding: 0 rem(10px) 0 rem(7px);
+        border-right: 1px solid $uiColor;
+      }
+    }
+    .wrap-bottom{
+      position: relative;
+      margin-top:rem(30px);
+      height: rem(50px);
+      text-align: center;
+      line-height: rem(50px);
+      &:after{
+        @include Miscellaneous;
+      }
+      .right-line{
+        border-right: 1px solid $uiColor;
+        padding-right: rem(10px);
+      }
+      .right-span{
+        margin-left: rem(6px);
+      }
+      >span{
+        color: $uiColor;
+        font-size:rem(12px);
+      }
+    }
+  }
+
+}

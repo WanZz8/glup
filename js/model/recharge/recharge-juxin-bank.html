@@ -1,0 +1,46 @@
+	<div class="page-recharge-common">
+		<ul>
+			<li>
+				<div class="label">充值银行：</div>
+				<div class="inpt">
+					<select>
+						<option value="ICBC">工商银行</option>
+						<option value="CCB">建设银行</option>
+						<option value="ABC">农业银行</option>
+						<option value="CMB">招商银行</option>
+						<option value="COMM">交通银行</option>
+						<option value="CMBC">民生银行</option>
+						<option value="CIB">兴业银行</option>
+						<option value="CEB">光大银行</option>
+						<option value="CITIC">中信银行</option>
+						<option value="GZCB">广州银行</option>
+						<option value="HXB">华夏银行</option>
+						<option value="BOC">中国银行</option>
+						<option value="BJRCB">北京农商行</option>
+						<option value="BCCB">北京银行</option>
+						<option value="SDB">深圳发展银行</option>
+						<option value="SZPAB">平安银行</option>
+						<option value="BOS">上海银行</option>
+						<option value="PSBC">中国邮政储蓄</option>
+						<option value="SPDB">浦东发展银行</option>
+						<option value="GDB">广东发展银行</option>
+					</select>
+				</div>
+			</li>
+			<li>
+				<div class="label">充值金额：</div>
+				<div class="inpt">
+					<input type="text" placeholder="请输入金额" maxlength="8" data-events="keyup:money;" v-input="money">
+				</div>
+			</li>
+		</ul>
+		<div class="opt"><button class="next" data-events="click:next;">下一步</button></div>
+		<div class="page-recharge-remark">
+			<h5>温馨提示：</h5>
+			<p>1）实时到账 0手续费</p>
+			<p>2）处理时间为7*24小时</p>
+			<p>3）每日充值总额无上限</p>
+			<p>4）单笔最低100元，最高4.5万</p>
+			<p>5）如需帮助，请 <a href='javascript:document.getElementById("#chat").style.display=block;' pop="live-chat">联系客服</a></p>
+		</div>
+	</div>

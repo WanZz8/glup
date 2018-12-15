@@ -1,0 +1,45 @@
+<% for(var i=0,len=list.length;i<len;i++){ var item = list[i];%>
+<div class="under-may">
+    <%if(item.title){ %>
+    <div class="under-left">
+        <div class="under-left-small">
+        	<p><%=item.day%></p>
+        	<%=item.month%><%=$ln('月')%>
+        </div>
+    </div>
+    <div class="left" style="padding-top: 18px;margin-left: -6px;">
+    	<div class="under-times-light">
+    		<span class="icon icon-clock"></span>
+    		<%= item.time%>
+        </div>
+    </div>
+    <% }else{ %>
+    <div class="under-times"></div>
+    <div class="under-times-light">
+        <span class="icon icon-clock"></span>
+        <%= item.time%>
+    </div>
+    <%}%>
+    <div class="under-dark" <%if(!item.title){%> style="padding-top: 6px;" <%}%>  >
+    	<%=#item.txt%>
+    	<%if(item.type =='long'){ %>
+    	<table class="zbtable">
+			<tr>
+	            <td><%=item.qz%></td>
+	            <td><%=item.yq%></td>
+	            <td><%=item.sj%></td>
+	            <td class="country"><img src="<%=item.country%>" class="ensign"></td>
+	        </tr>
+	        <tr>
+	            <td>
+	              	<img src="./images/star/<%=item.star%>.png">
+	            </td>
+	            <td class="tag" colspan="2">
+	              	<span class="style-tag <%=item.clazz%>"><%=item.tag%></span>
+	            </td>
+	        </tr>
+	    </table>
+	    <% } %>
+    </div>
+</div>
+<% } %>

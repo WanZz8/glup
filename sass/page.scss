@@ -1,0 +1,78 @@
+@import "variable";
+.page-page{
+  color: #333333;
+  td{
+    text-align: center;
+  }
+  th{padding: 0 10px;}
+  .neighbor{
+    margin: 0 auto;
+    width: rem(66px);
+    font-size: rem(13px);
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 5px;
+    &:hover{
+      border: 1px solid $activeColor;
+      color: $activeColor;
+      background-color: #fff;
+    }
+  }
+  .redirect{
+    margin: 0 5px;
+    width: rem(66px);
+    padding: 5px 5px;
+    font-size: rem(13px);
+    text-align: center;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .redirect:hover{
+    border: 1px solid $activeColor;
+    color: $activeColor;
+    background-color: #fff;
+   }
+  .amount{
+    text-align: center;
+    width: rem(50px);
+    height: rem(26px);
+    padding: rem(4px) 0;
+    line-height: rem(26px);
+    margin-left: 5px;
+    border:1px solid #eeeeee;
+  }
+  .amount:focus{
+      outline: none;
+      border: 1px solid $activeColor;
+  }
+  .total{
+      font-size: rem(13px);
+  }
+  .jump{
+    vertical-align: top;
+    ul{
+        padding: 0 10px;
+    }
+    li{
+      display: inline-block;
+      width: rem(24px);
+      height: rem(22px);
+      line-height: rem(22px);
+      font-size: rem(14px);
+      text-align: center;
+      color: #333333;
+      //background-color: #dfddd9;
+      cursor: pointer;
+      &.active{
+        background-color: $activeColor;
+        color: #fff;
+        border-radius: 5px;
+      }
+    }
+  }
+}

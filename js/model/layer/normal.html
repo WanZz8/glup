@@ -1,0 +1,38 @@
+<div class="noticeLayer" id="layer-<%=eventId%>">
+    <div class="mask"></div>
+    <div class="content">
+        <div class="body">
+            <div class="main">
+                <div class="head">
+                    提示
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-close" id="btn-layer-cancel<%=cancel%>"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-<%= image%>"></div>
+                        </div>
+                    </div>
+                    <p class="text">
+                        <%=# content%>
+                    </p>
+                </div>
+                <div class="foot">
+                    <table>
+                        <tr>
+                            <% for(var i = 0,len = btn.length;i < len;i++){ %>
+                                <td>
+                                    <a id="btn-layer<%= btn[i].id%>"><%= btn[i].name%></a>
+                                </td>
+                            <% } %>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

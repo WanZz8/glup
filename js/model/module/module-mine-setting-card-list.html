@@ -1,0 +1,31 @@
+<% for(var i = 0,len = list.length;i < len;i++){%>
+<% var item =list[i];%>
+<%if(item.defaultCard==1){%>
+<div class="bankcard active">
+	<i class="bank-right-top"></i>
+<%} else {%>
+<div class="bankcard">
+<%}%>
+	<img src="./images/banks/<%=item.bank%>.png" class="bank-img" />
+	<div class="bankcard-main">
+		<p><%=item.bank%></p>
+		<p><%=$tool().idCardMask(item.cardNumber)%></p>
+		<div class="right-text">
+			<%if(item.defaultCard==1){%>
+				<button class="default-card">默认卡片</button>
+			<%} else {%>
+				<button class="default-card" data-events="click:setDefault;" data-bind="<%=item.id%>">设为默认</button>
+			<%}%>
+			<button class="del-card" data-bind="<%=item.id%>" data-events="click:delCard;">删除卡片</button>
+		</div>
+	</div>
+</div>
+<%}%>
+<div class="bankcard">
+	<a pop="mine-setting-bank-add">
+	<div class="addcard" data-events="click:showDoc;">
+		<div class="add-left">+</div>
+		<div class="add-right">添加银行卡</div>
+	</div>
+	</a>
+</div>

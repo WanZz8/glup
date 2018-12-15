@@ -1,0 +1,76 @@
+	<div class="page-recharge-common" id="init">
+		<ul>
+			<li>
+				<div class="label">充值银行：</div>
+				<div class="inpt">
+					<select name="bank">
+						<option>工商银行</option>
+						<option>招商银行</option>
+						<option>建设银行</option>
+						<option>农业银行</option>
+						<option>中国银行</option>
+						<option>交通银行</option>
+						<option>民生银行</option>
+						<option>中信银行</option>
+						<option>浦发银行</option>
+						<option>广发银行</option>
+						<option>平安银行</option>
+						<option>兴业银行</option>
+						<option>光大银行</option>
+					</select>
+				</div>
+			</li>
+			<li>
+				<div class="label">充值金额：</div>
+				<div class="inpt">
+					<input type="text" maxlength="8" data-events="keyup:cmoney;" v-input="money" placeholder="请输入金额">
+				</div>
+			</li>
+		</ul>
+		<div class="opt"><button class="next" data-events="click:next;">下一步</button></div>
+		<div class="page-recharge-remark">
+			<h5>温馨提示：</h5>
+			<p>1）实时到账 0手续费</p>
+			<p>2）处理时间为7*24小时</p>
+			<p>3）每日充值总额无上限</p>
+			<p>4）单笔最低100元，最高4.5万</p>
+			<p>5）如需帮助，请 <a href='javascript:document.getElementById("#chat").style.display=block;' pop="live-chat" class="recharge-dp-chat">联系客服</a></p>
+		</div>
+	</div>
+	<div class="page-recharge-common" style="display: none;" id="next">
+		<div class="attention">
+			<h4>请您通过网上银行向以下账户转账</h4>
+			<p>若附言错误，无法自动到帐</p>
+		</div>
+		<div class="item">
+			<div class="item-left">收款银行：</div>
+			<div class="item-right"><strong name="bank">工商银行</strong></div>
+		</div>
+		<div class="item">
+			<div class="item-left">支行名称：</div>
+			<div class="item-right"><strong name="bankName"></strong><a href="javascript:;" data-clipboard-text="" class="bankName">复制</a></div>
+		</div>
+		<div class="item">
+			<div class="item-left">收款账号姓名：</div>
+			<div class="item-right"><strong name="accountName"></strong><a href="javascript:;" data-clipboard-text="" class="accountName">复制</a></div>
+		</div>
+		<div class="item">
+			<div class="item-left">收款账号：</div>
+			<div class="item-right"><strong name="accountNo"></strong><a href="javascript:;" data-clipboard-text="" class="accountNo">复制</a></div>
+		</div>
+		<div class="item">
+			<div class="item-left">充值金额：</div>
+			<div class="item-right"><strong name="money">0.00</strong><a href="javascript:;" data-clipboard-text="" class="money">复制</a></div>
+		</div>
+		<div class="item">
+			<div class="item-left"><span class="importance">(重要必填项)</span>附言：</div>
+			<div class="item-right"><strong name="remark"></strong><a href="javascript:;" data-clipboard-text="" class="remark">复制</a></div>
+		</div>
+		<div class="page-recharge-remark">
+			<h5>温馨提示：</h5>
+			<p>1）请确认收款银行、账号再进行充值</p>
+			<p>2）附言区分大小写，请复制填写在<span class="yellow">转账备注、留言或用途里</span></p>
+			<p>3）<span class="yellow">0手续费</span>，若附言填写正确，付款成功后自动到帐</p>
+			<p>4）如需帮助，请 <a href='javascript:document.getElementById("#chat").style.display=block;' pop="live-chat" class="recharge-dp-chat">联系客服</a></p>
+		</div>
+	</div>

@@ -1,0 +1,10 @@
+/node_modules/
+/手机改版/
+/活动文件/
+/.idea/
+/images/game/
+/publish/images/
+*.xls
+*.docx
+.project
+/css/combo.css

@@ -1,0 +1,299 @@
+@import "../variable";
+
+$s-mainColor: #fff;
+$s-titleColor: #2d2d2d;
+$rise: #e34c4c;
+$fall: #00b38f;
+$tips: #fa3448;
+
+.page-deal {
+  .rise {
+    color: $rise !important;
+  }
+  .fall {
+    color: $fall !important;
+  }
+  .setProfit {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    font-size: rem(12px);
+    transition: all 0.1s;
+    &.step {
+      display: table;
+    }
+    &.show {
+      .content {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        transition: all 0.3s;
+      }
+      .mask {
+        opacity: 1;
+        transition: all 0.3s;
+      }
+    }
+    .mask {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+      z-index: 2;
+      transform: scale(0.5);
+      opacity: 0;
+      transition: all 0.3s;
+      .body {
+        height: rem(414px);
+        width: rem(694px);
+        margin: 0 auto;
+        background-color: #a6a8a7;
+        padding: rem(8px);
+        .main {
+          height: 100%;
+          .head {
+            height: rem(60px);
+            line-height: rem(60px);
+            background-color: #e4e4e4;
+            font-size: rem(24px);
+            color: #4e4e4e;
+            text-align: center;
+            position: relative;
+            .table {
+              height: rem(60px);
+              line-height: rem(60px);
+              position: absolute;
+              right: rem(28px);
+              top: 0;
+              .icon {
+                cursor: pointer;
+              }
+            }
+          }
+          .area {
+            background-color: #fff;
+            padding-top: rem(32px);
+            .bar {
+              width: rem(600px);
+              min-height: rem(50px);
+              line-height: rem(50px);
+              margin: 0 auto rem(18px) auto;
+              font-size: 0;
+              position: relative;
+              text-align: center;
+              &:last-child {
+                margin-bottom: 0;
+                padding-bottom: rem(20px);
+              }
+              &.controller {
+                text-align: center;
+                margin-top: rem(40px);
+              }
+              > p {
+                font-size: rem(14px);
+                color: $fontColor;
+                height: rem(20px);
+                line-height: rem(20px);
+                text-align: left;
+                cursor: default;
+                > a {
+                  color: $activeColor;
+                  cursor: pointer;
+                }
+              }
+              > .left {
+                display: inline-block;
+                width: rem(122px);
+                text-align: right;
+                font-size: rem(16px);
+                padding-right: rem(12px);
+              }
+              > .right {
+                display: inline-block;
+                width: rem(122px);
+                text-align: left;
+                font-size: rem(16px);
+                padding-left: rem(12px);
+              }
+              > .mid {
+                display: inline-block;
+                width: rem(356px);
+              }
+              .range {
+                width: rem(310px);
+              }
+              .operateCircle {
+                width: rem(22px);
+                height: rem(22px);
+                line-height: rem(22px);
+                vertical-align: middle;
+                text-align: center;
+                display: inline-block;
+                border-radius: 50%;
+                background: #e4e4e4;
+                font-size: rem(21px);
+                font-family: Arial;
+                cursor: pointer;
+                color: #fff;
+              }
+
+              .UI-Button {
+                display: inline-block;
+                width: rem(210px);
+                height: rem(50px);
+                line-height: rem(50px);
+                font-size: rem(18px);
+                margin: 0 rem(15px);
+                > div {
+                  text-align: center;
+                  text-align-last: center;
+                }
+              }
+            }
+          }
+          .foot {
+            height: rem(48px);
+            line-height: rem(48px);
+            background-color: #f6f6f6;
+            .bar {
+              width: rem(350px);
+              height: rem(50px);
+              line-height: rem(50px);
+              margin: 0 auto;
+              font-size: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tableArea {
+    text-align: center;
+    .info {
+      width: rem(900px);
+      margin: 0 auto;
+      text-align: center;
+      table-layout: auto;
+      th, td {
+        font-size: rem(14px);
+        border: 1px solid #e6e6e6;
+        vertical-align: middle;
+      }
+      th {
+        color: #262626;
+        background: #ededed;
+        height: rem(46px);
+      }
+      td {
+        color: #111111;
+        height: rem(60px);
+        > .pop {
+          color: $activeColor;
+          cursor: pointer;
+        }
+      }
+      .disabled {
+        width: rem(80px);
+        height: rem(40px);
+        line-height: rem(40px);
+      }
+      .setDetail {
+        width: rem(110px);
+        height: rem(40px);
+        line-height: rem(40px);
+        background: transparent;
+        border: 1px solid #d8ad5f;
+        //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        > div {
+          color: #d8ad5f;
+        }
+        &:active {
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+          > div {
+            box-shadow: 0 0 5px;
+          }
+        }
+        &:hover {
+          > div {
+            background: transparent;
+            box-shadow: 0 0 10px;
+          }
+        }
+      }
+      .sold {
+        width: rem(80px);
+        height: rem(40px);
+        line-height: rem(40px);
+        background: transparent;
+        border: 1px solid #d8ad5f;
+        text-indent: rem(6px);
+        letter-spacing: rem(6px);
+        //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        > div {
+          //color: #525252;
+          color: #d8ad5f;
+        }
+        &:active {
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+          > div {
+            box-shadow: 0 0 5px;
+          }
+        }
+        &:hover {
+          > div {
+            background: transparent;
+            box-shadow: 0 0 10px;
+          }
+        }
+      }
+    }
+    .UI-Page {
+      display: inline-block;
+      margin-top: rem(20px);
+    }
+  }
+  .income {
+    position: absolute;
+    font-size: rem(16px);
+    height: rem(40px);
+    line-height: rem(40px);
+    display: inline-block;
+    min-width: rem(140px);
+    top: 0;
+    right: rem(170px);
+    text-align: center;
+    > span {
+      display: inline-block;
+      > i {
+        color: $rise;
+        font-family: Arial;
+        font-weight: normal;
+        font-size: rem(16px);
+        display: inline-block;
+        height: rem(40px);
+        line-height: rem(40px);
+      }
+      > b {
+        color: $fall;
+        font-family: Arial;
+        font-weight: normal;
+        font-size: rem(16px);
+        display: inline-block;
+        height: rem(40px);
+        line-height: rem(40px);
+      }
+    }
+  }
+}

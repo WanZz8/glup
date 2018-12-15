@@ -1,0 +1,25 @@
+<table>
+	<tr>
+		<th>交易编号</th>
+		<th>时间</th>
+		<th>佣金来源</th>
+		<th>变动金额</th>
+		<th>账户余额</th>
+	</tr>
+	<% if(list.length==0){%>
+	<tr>
+		<td colspan="5">暂无数据</td>
+	</tr>
+	<% } %>
+	<% for(var i=0,len=list.length;i<len;i++){%>
+	<% var item = list[i];%>
+	<% var time = $tool().formatDate(item.time.time, "y-m-d h:i:s");%>
+	<tr>
+		<td><%=item.id%></td>
+		<td><%=time%></td>
+		<td><%=item.userName%></td>
+		<td><%=item.money%></td>
+		<td><%=item.assetMoney%></td>
+	</tr>
+	<% } %>
+</table>

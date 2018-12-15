@@ -1,0 +1,201 @@
+@import "variable";
+
+.page-login {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  font-size: rem(12px);
+  &.show {
+    .content {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      transition: all 0.3s;
+    }
+    .mask {
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
+  .mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .content {
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 2;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.3s;
+    .body {
+      height: rem(475px);
+      width: rem(486px);
+      margin: 0 auto;
+      background-color: #a6a8a7;
+      padding: rem(8px);
+      .main {
+        height: 100%;
+        .head {
+          height: rem(60px);
+          line-height: rem(60px);
+          background-color: #e4e4e4;
+          font-size: rem(24px);
+          color: #4e4e4e;
+          text-align: center;
+          position: relative;
+          .table {
+            height: rem(60px);
+            line-height: rem(60px);
+            position: absolute;
+            right: rem(28px);
+            top: 0;
+            .icon {
+              cursor: pointer;
+            }
+          }
+        }
+        .area {
+          height: rem(351px);
+          background-color: #fff;
+          padding-top: rem(32px);
+          .bar {
+            width: rem(350px);
+            height: rem(50px);
+            line-height: rem(50px);
+            margin: 0 auto rem(18px) auto;
+            font-size: 0;
+            position: relative;
+            .table {
+              position: absolute;
+              height: rem(50px);
+              top: 0;
+              &.left {
+                left: rem(12px);
+              }
+              &.right {
+                right: rem(14px);
+                cursor: pointer;
+                &.active {
+                  .icon {
+                    @extend .icon-eye_active;
+                  }
+                }
+                .icon {
+                  @extend .icon-eye;
+                }
+              }
+            }
+            .UI-Input {
+              width: rem(350px);
+              height: rem(50px);
+              line-height: rem(50px);
+              text-indent: rem(38px);
+              font-size: rem(16px);
+            }
+            .UI-Button {
+              width: rem(350px);
+              height: rem(50px);
+              line-height: rem(50px);
+              font-size: rem(18px);
+            }
+            input {
+              display: inline-block;
+              vertical-align: middle;
+            }
+            label {
+              font-size: rem(14px);
+              color: #9b9b9b;
+              display: inline-block;
+              vertical-align: middle;
+              text-indent: rem(14px);
+            }
+            span {
+              display: inline-block;
+              height: rem(50px);
+              line-height: rem(50px);
+              font-size: rem(14px);
+              vertical-align: middle;
+              text-indent: rem(10px);
+              color: #9b9b9b;
+              cursor: default;
+            }
+            #rememberPop {
+              position: absolute;
+              left: -9999px;
+              &:checked {
+                & + label {
+                  background: #d5aa5c;
+                  border-color: #cfaa67;
+                  &:before {
+                    content: '\2714';
+                    display: block;
+                    position: absolute;
+                    top: -1px;
+                    left: 1px;
+                    color: #fff;
+                    font-size: 14px;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    vertical-align: middle;
+                    font-weight: bold;
+                  }
+                }
+              }
+              & + label {
+                display: inline-block;
+                position: relative;
+                width: 16px;
+                height: 16px;
+                line-height: 16px;
+                background: #e6e6e6;
+                //background: transparent;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                cursor: pointer;
+                text-indent: 0;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+        .foot {
+          height: rem(48px);
+          line-height: rem(48px);
+          background-color: #f6f6f6;
+          .bar {
+            width: rem(350px);
+            height: rem(50px);
+            line-height: rem(50px);
+            margin: 0 auto;
+            font-size: 0;
+            text-align: justify;
+            text-align-last: justify;
+            -moz-text-align-last: justify;
+            &:after {
+              content: '';
+              display: inline-block;
+              width: 100%;
+            }
+            a {
+              font-size: rem(14px);
+              color: #9b9b9b;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

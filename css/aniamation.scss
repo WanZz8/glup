@@ -1,0 +1,56 @@
+@import "../sass/variable";
+
+#loading{
+  .main{
+    position: relative;
+    display: inline-block;
+    height: 164px;
+    line-height: 164px;
+    width:164px;
+
+    .loading {
+      text-align: center;
+      background: url('../images/animateLogo.png');
+      height: 164px;
+      line-height: 164px;
+      width:164px;
+      margin: 0 auto;
+      z-index:1;
+      position: absolute;
+    }
+    .wave {
+      background: url('../images/animateBg.png') repeat-x;
+      background-clip: content-box;
+      text-shadow: 0 0 rgba(0, 0, 0, 0.1);
+      animation: wave-animation 1s infinite linear, loading-animation 4s infinite linear alternate;
+      height:160px;
+      width: 160px;
+      opacity: 1;
+      position: absolute;
+      z-index: 0;
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+
+  100% {
+    background-position: 164px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 160px 0;
+  }
+
+  100% {
+    background-size: 160px 160px;
+  }
+}
+

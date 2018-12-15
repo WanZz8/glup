@@ -1,0 +1,36 @@
+@import "variable";
+
+.agent{
+  background-color: #0c0c0c;
+  height: 100vh;
+  .wrap{
+    display: table;
+    width: 100%;
+    height: 100%;
+    .body{
+      display: table-cell;
+      vertical-align: middle;
+      .main{
+        width: rem(600px);
+        height: rem(400px);
+        border-radius: 4px;
+        box-shadow: #e6e6e6 2px 2px 10px;
+        background-color: #ffffff;
+        text-align: center;
+        margin: 0 auto;
+        .title{
+          height: rem(100px);
+          line-height: rem(100px);
+          font-size: rem(30px);
+          letter-spacing: 4px;
+        }
+        .UI-Input{
+          margin: rem(10px) 0;
+        }
+        .UI-Button{
+          margin: rem(30px) auto;
+        }
+      }
+    }
+  }
+}

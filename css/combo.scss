@@ -1,0 +1,107 @@
+/* 引入初始化样式文件*/
+@import "base/eric-meyer-reset.min.css";
+@import "base/normalize.css";
+
+/*
+swiper样式
+ */
+@import "swiper.scss";
+
+/*
+弹出框样式
+*/
+@import 'layer.scss';
+
+/*
+加载动画样式
+ */
+@import "aniamation.scss";
+
+/**
+全局样式
+ */
+@import "../sass/globe";
+
+/**
+icon样式
+ */
+@import "../sass/icon";
+
+/**
+业务样式
+ */
+@import "../sass/head";
+//@import "../sass/foot";
+//@import "../sass/rightBar";
+
+//首页
+//@import "../sass/home";
+
+//代理登录页面
+@import "../sass/agent";
+
+//登录页面
+@import "../sass/login";
+
+//注册页面
+//@import "../sass/register";
+
+//聊天窗口
+//@import "../sass/chat";
+
+//个人中心
+@import "../sass/mine";
+@import "../sass/mine/mine-deal";
+@import "../sass/mine/mine-setting-alipay";
+
+//下载中心
+//@import "../sass/download";
+//优惠活动
+//@import "../sass/activity";
+//交易咨询
+//@import "../sass/news";
+//财经日历
+//@import "../sass/calendar";
+//交易页面样式
+//@import "../sass/trade";
+//交易规则
+//@import "../sass/tradeRule";
+//订单详情
+//@import "../sass/orderInfo";
+//平台公告页面样式
+//@import "../sass/notice";
+
+
+//英雄学院样式
+//@import "../sass/school";
+//关于我们样式
+//@import "../sass/us";
+//充值页面样式
+//@import "../sass/recharge";
+//充值页面样式
+@import "../sass/withdraw";
+//营销推广页面
+@import "../sass/marketing";
+//个人设置页面
+@import "../sass/setting";
+//代理中心页面
+@import "../sass/agency";
+//分页样式
+@import "../sass/page";
+//忘记密码
+//@import "../sass/forget";
+//用戶协议
+//@import "../sass/agree";
+
+/**
+零件模块
+ */
+@import "../sass/component/stocksLoading";
+
+//@media only screen and (max-width: 1366px),
+//only screen and (max-device-width:1366px) {
+//  html,
+//  body {
+//    font-size: #{($baseSize * (1366/$baseWidth))}px!important;
+//  }
+//}

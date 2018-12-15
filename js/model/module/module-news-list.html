@@ -1,0 +1,14 @@
+<% for(var i=0,len=list.length;i<len;i++){%>
+<div class="content-body-main" data-bind="<%=list[i].id%>" data-events="click:detail;">
+	<div class="main-left">
+		<img src="<%=list[i].thumb%>" alt="<%=list[i].title%>">
+	</div>
+	<div class="main-right">
+		<p class="title"><%=list[i].title%></p>
+		<p class="gray-words leave-top">
+			<span class="icon icon-clock"></span>
+			<%=list[i].date%>
+		</p>
+	</div>
+</div>
+<%}%>

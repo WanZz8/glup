@@ -1,0 +1,30 @@
+<% for(var i = 0,len = list.length;i < len;i++){%>
+<% var obj = list[i]; %>
+<% if(!!obj){ %>
+    <% var brief = $q().getBrief(obj.contract)%>
+        <li class="quote <%if(search === list[i].contract || (search === undefined && i === 0)){%>active<%}%> swiper-slide"  data-events="click:switchQuote;" data-bind="<%=list[i].code%>">
+            <a href="#home?code=<%=list[i].contract%>">
+                <div class="name">
+                    <%=list[i].name%>
+                    <div class="table">
+                        <div class="tableCell">
+                            <div class="icon icon-hot"></div>
+                        </div>
+                    </div>
+                </div>
+                <%if(!!brief){%>
+                <%if(brief.isTrading){%>
+                <div class="price <%= brief.isUp?'rise':'fall'%>"><%=brief.price.toFixed(brief.priceDigit)%></div>
+                <div class="tend <%= brief.isUp?'rise':'fall'%>"><%= brief.percent >= 0?'+':''%><%=brief.percent%>%</div>
+                <%}else{%>
+                <div class="price <%= brief.isUp?'rise':'fall'%>" ><%=brief.price.toFixed(brief.priceDigit)%></div>
+                <div class="tend">休市</div>
+                <%}%>
+                <%}else{%>
+                <div class="price">-</div>
+                <div class="tend">休市</div>
+                <%}%>
+            </a>
+        </li>
+    <% } %>
+<% } %>

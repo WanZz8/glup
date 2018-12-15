@@ -1,0 +1,19 @@
+<div class="page-head">
+    <div class="userInfo" style="display: none;" data-element="userInfoNode">
+        <div class="wrap">
+            <div class="left">
+                <span class="basicTag hint" v-param="hello"></span>
+                <span class="basicTag user-sp" v-param="username"></span>
+                <a class="basicTag hint" href="#home" data-events="click:logout;"><%=$ln('安全退出')%></a>
+            </div>
+            <div class="right">
+                <a class="basicTag hint ico right-line" href="#mine-setting-info"><span class="table"><span
+                        class="tableCell"><span class="icon icon-user"></span></span></span><%=$ln('我的账户')%></a>
+                <span class="basicTag hint ico"><span class="table"><span class="tableCell"><span
+                        class="icon icon-price"></span></span></span> <%=$ln('余额')%>：<span class="user-sp"
+                                                                                           v-param="money">0.00</span></span>
+                <a class="basicTag btn-pay" href="#withdraw"><%=$ln('提款')%></a>
+            </div>
+        </div>
+    </div>
+</div>

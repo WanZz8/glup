@@ -1,0 +1,7 @@
+<% for(var i = 0,len = list.length;i < len;i++){%>
+<p class="main-center-hint">
+	<a href="#notice-detail?id=<%=list[i].id%>"><%=list[i].title%></a>
+	<span class="main-num"><%=$tool().formatDate(list[i].time.time,'[m/d]')%></span>
+	<% if((i+1) !== len){%><span>|</span><% }%>
+</p>
+<% }%>

@@ -1,0 +1,28 @@
+<% if(list.length>0){%>
+<thead>
+	<tr>
+		<th width="50px">时间</th>
+		<th width="70px">国家/地区</th>
+		<th width="90px">城市</th>
+		<th width="120px">重要性</th>
+		<th>事件</th>
+	</tr>
+</thead>
+<% } %>
+<tbody>
+	<% if(list.length==0){%>
+	<tr>
+		<td colspan="3">暂无数据</td>
+	</tr>
+	<% } %>
+	<% for(var i=0,len=list.length;i<len;i++){%>
+	<% var item = list[i];%>
+	<tr>
+		<td><%=item.public_time%></td>
+		<td><%=item.country%></td>
+		<td><%=item.city%></td>
+		<td><img src="../images/star/<%=item.star%>.png"></td>
+		<td><%=item.eventcontent%></td>
+	</tr>
+	<% } %>
+</tbody>

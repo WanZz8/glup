@@ -1,0 +1,12 @@
+<% for(var i=0,len=list.length;i<len;i++){%>
+<div class="item" data-bind="<%=list[i].id%>" data-events="click:detail;">
+	<div class="date">
+		<h5><%=list[i].day%></h5>
+		<p><%=list[i].date%></p>
+	</div>
+	<div class="content">
+		<h5><%=list[i].title%></h5>
+		<p><%=list[i].text%></p>
+	</div>
+</div>
+<%}%>

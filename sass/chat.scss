@@ -1,0 +1,228 @@
+@import "variable";
+/*客服页面样式*/
+.customer-body{
+    background: #fff;
+    color: #333;
+    //overflow: hidden;
+    border-radius: rem(5px);
+    position: fixed;
+    top:15%;
+    left:50%;
+    margin-left: rem(-450px);
+    z-index: 9999;
+    .white-words{
+        color: #fff;
+    }
+    .gray-words {
+        color: #a8a7a4;
+    }
+    .right-text {
+        text-align: right;
+    }
+    .customer-main{
+        position: relative;
+        width: rem(900px);
+        height: rem(67px);
+        line-height: rem(67px);
+        border-top-left-radius: rem(3px);
+        border-top-right-radius: rem(3px);
+        margin: 0 auto;
+        background-color: #0c0c0c;
+        //background: #3c4c66;
+        .hero-customer{
+            //padding: 0 0px rem(5px) rem(20px);
+            padding-left: rem(20px);
+            font-size: rem(18px);
+        }
+        .customer-period{
+            font-family:"\u65b0\u5b8b\u4f53";
+            font-size: rem(20px);
+            margin-left: rem(20px);
+            //padding: rem(10px) 0px rem(10px) rem(20px);
+        }
+        .close{
+            position: absolute;
+            right: rem(8px);
+            top: rem(16px);
+            cursor: pointer;
+            .icon{
+                display: block;
+            }
+        }
+    }
+    .customer-chat{
+        width: rem(900px);
+        margin: 0 auto;
+        .chat-left{
+            width: 66.5%;
+            float: left;
+            .chat-bg{
+                height: rem(420px);
+                background: url(../images/chat.png) top left no-repeat;
+                border: 1px solid #e6e6e6;
+                border-right: none;
+                .live-chat-main{
+                    list-style: none;
+                    display: block;
+                    height: 100%;
+                    overflow: auto;
+                    font-size: rem(14px);
+                    padding-top: rem(18px);
+                    li {
+                        margin-bottom: rem(20px);
+                    }
+                    .chat-txt-left{
+                        float: left;
+                        clear: both;
+                        width: 100%;
+                        .head-menu-left {
+                            float: left;
+                            margin-left: rem(20px);
+                        }
+                        .online-customer-service {
+                            float: left;
+                            margin-left: rem(20px);
+                            position: relative;
+                            width: 65%;
+                            .be-coming {
+                                background-color: #d8eef6;
+                                border-radius: 0 rem(5px) rem(5px) rem(5px);
+                                padding: rem(10px);
+                                margin-top: rem(5px);
+                                word-wrap: break-word;
+                                word-break: normal;
+                                max-width: rem(300px);
+                                min-width: rem(30px);
+                                display: inline-block;
+                                position: relative;
+                                .top-level {
+                                    position: absolute;
+                                    top: 0;
+                                    left: rem(-10px);
+                                    border-top: rem(10px) solid #d8eef6;
+                                    border-left: rem(10px) solid transparent;
+                                    z-index: 100;
+                                }
+                                p{
+                                    line-height: rem(24px);
+                                    a{
+                                        font-size:rem(14px);
+                                        line-height:rem(24px);
+                                        display: inline-block;
+                                        cursor: pointer;
+                                        color: #cfaa67;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .chat-txt-right{
+                        float: right;
+                        clear: both;
+                        width: 100%;
+                        .head-menu-right {
+                            float: right;
+                            margin-right: rem(20px);
+                        }
+                        .online-service-right {
+                            float: right;
+                            margin-right: rem(20px);
+                            position: relative;
+                            width: 65%;
+                            .few-questions {
+                                background-color: #e6e6e6;
+                                border-radius: rem(5px) 0px rem(5px) rem(5px);
+                                padding: rem(10px);
+                                margin-top: rem(5px);
+                                word-wrap: break-word;
+                                word-break: normal;
+                                max-width: rem(300px);
+                                min-width: rem(30px);
+                                display: inline-block;
+                                float: right;
+                                position: relative;
+                                .right-level {
+                                    position: absolute;
+                                    top: 0;
+                                    right: rem(-10px);
+                                    border-top: rem(10px) solid #e6e6e6;
+                                    border-right: rem(10px) solid transparent;
+                                    z-index: 100;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .chat-box{
+                border-top: rem(2px) solid #e6e6e6;
+                border-left: 1px solid #e6e6e6;
+                margin-top: -1px;
+                .chat-box-text{
+                    border: 0px;
+                    resize: none;
+                    width: 96.5%;
+                    height: rem(60px);
+                    outline: none;
+                    padding: rem(10px) 0px rem(10px) rem(20px);
+                    font-size: rem(14px);
+                }
+            }
+            .chat-ifrom{
+                text-align: right;
+                border-radius: 0px 0px 0px rem(5px);
+                border-bottom: 1px solid #e6e6e6;
+                border-left: 1px solid #e6e6e6;
+                padding: 0px rem(15px) rem(10px) 0px;
+                .chat-close{
+                    color: #fff;
+                    font-size: rem(14px);
+                    padding: rem(3px) rem(20px);
+                    border-radius: rem(5px);
+                    line-height: rem(20px);
+                    //background: #cccccc;color="#d1a24c"
+                    //background: #353F59;
+                    background: #d1a24c;
+                    border: 0px;
+                    cursor: pointer;
+                }
+                .chat-send{
+                    color: #fff;
+                    font-size: rem(14px);
+                    padding: rem(3px) rem(20px);
+                    border-radius: rem(5px);
+                    line-height: rem(20px);
+                    margin-left: rem(10px);
+                    background: #d1a24c;
+                    border: 0px;
+                    cursor: pointer;
+                }
+                button:focus{
+                    outline: none;
+                }
+            }
+        }
+        .chat-right{
+            width: 33.5%;
+            float: left;
+            .chat-pic{
+                border:1px solid #e6e6e6;
+                border-top: none;
+                border-right: 2px solid #000
+            }
+            .chat-company{
+                background: #e6e6e6;
+                margin-top: rem(-3px);
+                padding: rem(10px);
+                font-size: rem(16px);
+            }
+            .chat-brief{
+                border:1px solid #e6e6e6;
+                font-size: rem(14px);
+                padding: rem(10px) 0px rem(112px) rem(10px);
+                border-radius: 0px 0px rem(5px) 0px;
+                line-height: rem(25px);
+            }
+        }
+    }
+}

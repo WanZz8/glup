@@ -1,0 +1,45 @@
+<% var income = 0,activity = 0,position = 0,volume = 0,recharge = 0; %>
+<table style="table-layout: fixed">
+	<tr>
+		<th>用户名</th>
+		<th>交易手数</th>
+		<th>投资收益</th>
+        <th>补偿存入</th>
+		<th>活动派奖</th>
+		<th>盈亏</th>
+	</tr>
+	<% if(list.length==0){%>
+		<tr>
+			<td colspan="6">暂无盈亏数据</td>
+		</tr>
+	<% }else{ %>
+		<% for(var i=0,len=list.length;i < len;i++){%>
+		<% let item = list[i];%>
+		<%
+			income=income.add(item.income);
+			activity=activity.add(item.activity);
+			position=position.add(item.position);
+            recharge=recharge.add(item.recharge);
+			volume+=item.volume;
+		%>
+		<tr>
+			<td><%=item.username%></td>
+			<td><%=item.volume%></td>
+			<td class="<%= item.income > 0?'rise':'fall' %>"><%=item.income%></td>
+			<td><%=item.recharge%></td>
+			<td><%=item.activity%></td>
+			<td class="<%= item.position > 0?'rise':'fall' %>"><%=item.position%></td>
+		</tr>
+		<% } %>
+	<% } %>
+</table>
+<% if(list.length > 0){%>
+<div class="summary">
+    <div class="title grid">总计</div>
+    <div class="grid"><%=volume%></div>
+    <div class="grid <%= income > 0?'rise':'fall' %>"><%=income%></div>
+    <div class="grid"><%=recharge%></div>
+    <div class="grid"><%=activity%></div>
+    <div class="grid <%= position > 0?'rise':'fall' %>"><%=position%></div>
+</div>
+<% } %>

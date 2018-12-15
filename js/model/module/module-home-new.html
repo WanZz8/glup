@@ -1,0 +1,15 @@
+<% for(var i = 0,len = list.length;i < len;i++){ %>
+<% var item = list[i];%>
+<% var title = item.title.length > 30 ? item.title.substr(0, 30) + '...' : item.title;%>
+<% if(i<2){%>
+<li>
+	<div class="img">
+		<img src="<%=item.thumb%>" alt="<%=item.title%>" title="<%=item.title%>" width="76px">
+	</div>
+	<div class="link">
+		<a target="_blank" href="#news-detail?id=<%=item.id%>"><%=title%></a>
+		<p><%=item.date%></p>
+	</div>
+</li>
+<% } %>
+<% } %>

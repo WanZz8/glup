@@ -1,0 +1,13 @@
+<div class="page-setting">
+	<div class="page-setting-tab">
+		<ul>
+			<li class="<%=selected === 'mine-setting-info'?'active':''%>" data-bind="mine-setting-info" data-events="click:switch;"><%=$ln('基本信息')%></li>
+			<li class="<%=selected === 'mine-setting-cert'?'active':''%>" data-bind="mine-setting-cert" data-events="click:switch;"><%=$ln('实名认证')%></li>
+			<li class="<%=selected === 'mine-setting-bank'?'active':''%>" data-bind="mine-setting-bank" data-events="click:switch;"><%=$ln('银行卡管理')%></li>
+			<!--<li class="<%=selected === 'mine-setting-alipay'?'active':''%>" data-bind="mine-setting-alipay" data-events="click:switch;"><%=$ln('支付宝管理')%></li>-->
+			<!--<li class="<%=selected === 'mine-setting-mobile'?'active':''%>" data-bind="mine-setting-mobile" data-events="click:switch;"><%=$ln('修改手机绑定')%></li>-->
+			<!--<li class="<%=selected === 'mine-setting-password'?'active':''%>" data-bind="mine-setting-password" data-events="click:switch;"><%=$ln('密码设置')%></li>-->
+		</ul>
+	</div>
+	<div class="main" id="setting"></div>
+</div>

@@ -1,0 +1,184 @@
+@import "variable";
+.page-agency{
+    width: 100%;
+    min-height: rem(520px);
+    background-color: #fff;
+    .stop{
+        color: #e62d3a;
+        background-color: #eeeeee;
+        border: 0;
+    }
+    .now{
+        color: #ffffff;
+        background-color: #72af49;
+        border: 0;
+    }
+    .will{
+        color: #ffffff;
+        background-color: #62b0e7;
+        border: 0;
+    }
+    .common-table{
+        width: 100%;
+        padding: rem(20px) rem(20px) 0 rem(20px);
+        table{
+            width: 100%;
+            border: 0;
+            tr:first-child{
+              background-color: #f9f9f9;
+            }
+            th,td{
+              padding: rem(15px) 0;
+              border: 1px solid #f1f1f1;
+              text-align: center;
+              vertical-align: middle;
+              span{
+                border-radius: rem(8px);
+                border: 1px solid #e7e7e7;
+                font-size: rem(12px);
+                padding: rem(3px) rem(15px);
+                background-color: #eeeeee;
+                font-weight: bold;
+              }
+            }
+            th{
+                color: #333333;
+            }
+            td{
+                color: #666666;
+                &.rise{
+                  color: $rise;
+                }
+                &.fall{
+                  color: $fall;
+                }
+            }
+        }
+    }
+    &-subaccount{
+        padding-bottom: rem(15px);
+        .rhzq{
+            background:url(../images/rhzq.jpg) no-repeat center;
+            height: 165px;
+        }
+        .tgqd{
+            background:url(../images/tgqd.png) no-repeat center;
+            height: 292px;
+            text-align: center;
+            padding: rem(100px) rem(100px) rem(100px) rem(150px);
+            .copyurl{
+                display: inline-block;
+                border: 1px solid #828282;
+                border-radius: rem(6px);
+                padding: rem(8px) rem(10px);
+                .copy-left{
+                    float: left;
+                    p{
+                        text-align: left;
+                        line-height: rem(20px);
+                    }
+                    .txt{
+                        color:#111111;
+                        font-weight: bold;
+                        span{
+                            font-size: rem(14px);
+                            font-weight: 500;
+                            color: #cfcfcf;
+                        }
+                    }
+                    .url{
+                        color: #d7bb83;
+                    }
+                }
+                .copy-right{
+                    float: left;
+                    margin-left: rem(5px);
+                    padding-top: rem(2px);
+                    button{
+                        padding: rem(10px) rem(5px);
+                        border-radius: rem(8px);
+                        background-color: #333333;
+                        border: 0;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                    button:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+        .zqms{
+            background:url(../images/zqms.jpg) no-repeat center;
+            height: 262px;
+        }
+    }
+    &-team{
+        .bar{
+            margin: rem(20px) rem(20px) 0 rem(20px);
+        }
+        label{
+          padding-left: rem(10px);
+        }
+        .UI-Input{
+            width: rem(200px);
+            height: rem(36px);
+            margin: 0 rem(14px);
+        }
+        .UI-Button{
+            display: inline-block;
+            width: rem(120px);
+            height: rem(36px);
+            >div{
+                line-height: rem(36px);
+            }
+            float: right;
+        }
+        .summary{
+          font-size: 0;
+          .grid{
+            display: inline-block;
+            width: 16.667%;
+            font-size: rem(16px);
+            text-align: center;
+            height: rem(32px);
+            line-height: rem(32px);
+            margin-top: rem(10px);
+            background-color: #f9f9f9;
+            color: #7d7575;
+            border: 1px solid #ffffff;
+            font-weight: bold;
+            &.rise{
+              color: $rise;
+            }
+            &.fall{
+              color: $fall;
+            }
+          }
+        }
+    }
+    .apply-remark{
+        margin-top: rem(30px);
+        padding-left: rem(240px);
+        text-align: center;
+        font-size: rem(14px);
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        img{
+            width: 30px;
+            margin-right: rem(3px);
+        }
+        span{
+            color: #fd333d;
+            font-weight: bold;
+        }
+    }
+}

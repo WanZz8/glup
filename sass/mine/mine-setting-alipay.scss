@@ -1,0 +1,40 @@
+@import "../variable";
+
+.page-setting-alipay{
+  padding-top:rem(40px);
+  .encodeQR{
+    display: none;
+    #alipayQR{
+      canvas{
+        margin: 0 auto;
+        display: block;
+        border: 1px solid #e6e6e6;
+      }
+    }
+  }
+  .decodeQR{
+    display: none;
+  }
+  .fake_QR{
+    width:rem(225px);
+    height:rem(225px);
+    line-height:rem(225px);
+    border: 1px solid #e6e6e6;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    input{
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left:0;
+      width:rem(225px);
+      height:rem(225px);
+      cursor: pointer;
+    }
+  }
+  .des{
+    text-align: center;
+    padding: rem(10px) 0;
+  }
+}

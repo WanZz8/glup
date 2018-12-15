@@ -1,0 +1,45 @@
+<% if(list.length>0){%>
+<thead>
+	<tr>
+		<th width="50px">时间</th>
+		<th width="90px">国家</th>
+		<td width="450px">指标名称</th>
+		<th width="150px">重要性</th>
+		<th width="80px">前值</th>
+		<th width="80px">预测值</th>
+		<th width="80px">公布值</th>
+		<td>实际影响</th>
+	</tr>
+</thead>
+<% } %>
+<tbody>
+	<% if(list.length==0){%>
+	<tr>
+		<td colspan="8">暂无数据</td>
+	</tr>
+	<% } %>
+	<% for(var i=0,len=list.length;i<len;i++){%>
+	<% var t = list[i].key.split("#");%>
+	<% var imgSrc = 'https://res.6006.com/jin10/flag/'+t[1].substr(0,2)+'.png';%>
+	<% var ls = list[i].list;%>
+	<tr>
+		<td><%=t[0]%></td>
+		<td class="calender-right-border"><img src="<%= imgSrc%>"></td>
+		<td colspan="6">
+			<table style="margin-bottom: 0;border: none;">
+				<% for(var j=0,l=ls.length;j<l;j++){%>
+				<% var obj = ls[j];%>
+				<tr style="border: none;">
+					<td width="450px"><%=obj.title%></td>
+					<td width="150px"><img src="../images/star/<%=obj.star%>.png"></td>
+					<td width="80px"><%=obj.previous%></td>
+					<td width="80px"><%=obj.hope%></td>
+					<td width="80px"><%=obj.open%></td>
+					<td><span class="<%= obj.clazz%>" ><%=obj.influence%></span></td>
+				</tr>
+				<% } %>
+			</table>
+		</td>
+	</tr>
+	<% } %>
+</tbody>

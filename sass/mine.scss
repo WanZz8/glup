@@ -1,0 +1,209 @@
+@import "variable";
+
+.page-mine {
+  width: 100%;
+  min-height: rem(470px);
+  background-color: $font-white;
+  padding: rem(15px);
+  &-index {
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: rem(20px) 0;
+    display: -webkit-box;
+    > .wrap {
+      width: rem(1200px);
+      margin: 0 auto;
+      .menu {
+        width: rem(240px);
+        float: left;
+        ul {
+          list-style-type: none;
+          li {
+            text-align: center;
+            padding: rem(18px) 0;
+            background-color: #e5e7ea;
+            border-bottom: 1px solid #fff;
+            cursor: pointer;
+          }
+          .active {
+            background-color: $activeColor;
+            color: #fff;
+          }
+        }
+        .qc {
+          background-color: $font-white;
+          text-align: center;
+          padding: rem(18px);
+          p {
+            font-size: rem(13px);
+          }
+        }
+      }
+      > .main {
+        float: right;
+        margin-left: rem(20px);
+        background-color: $font-white;
+        width: rem(930px);
+        height: auto;
+        border-radius: rem(5px);
+        border: 1px solid $font-white;;
+      }
+    }
+  }
+  .tab {
+    display: flex;
+    display: -webkit-flex;
+    ul {
+      flex: 0.65;
+      -webkit-box-flex: .65;
+      -webkit-flex: .65;
+      list-style-type: none;
+      li {
+        float: left;
+        width: rem(124px);
+        color: #666666;
+        cursor: pointer;
+        margin-right: rem(15px);
+        padding: rem(10px) 0;
+        text-align: center;
+        border-radius: rem(4px);
+        background-color: #f9f9f9;
+        border: 1px solid #e6e6e6;
+      }
+      .active {
+        background-color: $activeColor;
+        border: 0;
+        color: #fff;
+      }
+    }
+    &-right {
+      flex: 0.3;
+      -webkit-box-flex: .3;
+      -webkit-flex: .3;
+      text-align: right;
+      padding-top: 15px;
+      span {
+        border: 1px solid #e6e6e6;
+        padding: 5px 15px;
+        margin-right: 12px;
+        font-size: 14px;
+        color: #666666;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .on {
+        color: #d1a24c;
+        border: 1px solid #d1a24c;
+      }
+    }
+  }
+  .mine-table {
+    padding-top: rem(15px);
+    width: 100%;
+    .title {
+      width: 100%;
+      border-bottom: 0;
+      background-color: #f1f1f1;
+      height:rem(40px);
+      position: relative;
+      .text-left{
+        font-size:rem(16px);
+        color: $activeColor;
+        position: relative;
+        display: inline-block;
+        height:rem(40px);
+        line-height:rem(40px);
+        text-indent: rem(30px);
+        &:before{
+          content: "";
+          width: rem(3px);
+          background: #d1a24c;
+          height: rem(16px);
+          border-radius: rem(3px);
+          left: rem(15px);
+          top: rem(12px);
+          position: absolute;
+        }
+      }
+      .UI-Button {
+        position: absolute;
+        top: rem(5px);
+        right: rem(20px);
+        width: rem(110px);
+        height: rem(30px);
+        line-height: rem(30px);
+        background: transparent;
+        border: 1px solid #d8ad5f;
+        //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        > div {
+          color: #d8ad5f;
+        }
+        &:active {
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+          > div {
+            box-shadow: 0 0 5px;
+          }
+        }
+        &:hover{
+          >div{
+            background: transparent;
+            box-shadow: 0 0 10px;
+          }
+        }
+        &.disabled{
+          border: 1px solid #d9d9d9;
+        }
+      }
+    }
+    .empty {
+      width: 100%;
+      text-align: center;
+      line-height: 48px;
+    }
+    .table-list {
+      width: 100%;
+      border: 0;
+      border: 1px solid red;
+      tr:first-child {
+        background-color: #f9f9f9;
+      }
+      th, td {
+        padding: 15px 0;
+        border: 1px solid #f1f1f1;
+        text-align: center;
+        vertical-align: middle;
+        span {
+          border-radius: rem(8px);
+          border: 1px solid #e7e7e7;
+          font-size: rem(12px);
+          padding: rem(3px) rem(15px);
+          background-color: #eeeeee;
+          font-weight: bold;
+        }
+        .stop {
+          color: #e62d3a;
+          background-color: #eeeeee;
+          border: 0;
+        }
+        .now {
+          color: #ffffff;
+          background-color: #72af49;
+          border: 0;
+        }
+        .will {
+          color: #ffffff;
+          background-color: #62b0e7;
+          border: 0;
+        }
+      }
+      th {
+        color: #333333;
+      }
+      td {
+        color: #666666;
+      }
+
+    }
+  }
+
+}
